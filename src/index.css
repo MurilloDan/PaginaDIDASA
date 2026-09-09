@@ -52,6 +52,43 @@ h4 { font-size: 18px; }
 h5 { font-size: 16px; }
 h6 { font-size: 14px; }
 
+/* Divi encoge los encabezados dentro de columnas angostas */
+.et_pb_column_1_3 h1,
+.et_pb_column_1_4 h1,
+.et_pb_column_1_5 h1,
+.et_pb_column_1_6 h1,
+.et_pb_column_2_5 h1 { font-size: 26px; }
+
+.et_pb_column_1_3 h2,
+.et_pb_column_1_4 h2,
+.et_pb_column_1_5 h2,
+.et_pb_column_1_6 h2,
+.et_pb_column_2_5 h2 { font-size: 23px; }
+
+.et_pb_column_1_3 h3,
+.et_pb_column_1_4 h3,
+.et_pb_column_1_5 h3,
+.et_pb_column_1_6 h3,
+.et_pb_column_2_5 h3 { font-size: 20px; }
+
+.et_pb_column_1_3 h4,
+.et_pb_column_1_4 h4,
+.et_pb_column_1_5 h4,
+.et_pb_column_1_6 h4,
+.et_pb_column_2_5 h4 { font-size: 18px; }
+
+.et_pb_column_1_3 h5,
+.et_pb_column_1_4 h5,
+.et_pb_column_1_5 h5,
+.et_pb_column_1_6 h5,
+.et_pb_column_2_5 h5 { font-size: 16px; }
+
+.et_pb_column_1_3 h6,
+.et_pb_column_1_4 h6,
+.et_pb_column_1_5 h6,
+.et_pb_column_1_6 h6,
+.et_pb_column_2_5 h6 { font-size: 15px; }
+
 p {
   margin: 0;
   padding-bottom: 1em;

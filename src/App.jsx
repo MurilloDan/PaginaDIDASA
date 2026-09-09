@@ -9,7 +9,7 @@ import Promos from './pages/Promos.jsx'
 import Repuestos from './pages/Repuestos.jsx'
 import ServicePage from './pages/ServicePage.jsx'
 import { services } from './pages/servicesData.js'
-import { handleInternalLinks, normalizePath } from './router.js'
+import { handleInternalLinks, normalizePath, scrollToHashOnLoad } from './router.js'
 
 const routes = {
   '/': { component: Home, title: 'Inicio - Tecnicentro DIDASA' },
@@ -35,6 +35,8 @@ function App() {
     const onPopState = () => setPath(normalizePath(window.location.pathname))
     window.addEventListener('popstate', onPopState)
     document.addEventListener('click', handleInternalLinks)
+    // Al abrir una URL con ancla, el navegador la busca antes de que React monte la página.
+    scrollToHashOnLoad()
     return () => {
       window.removeEventListener('popstate', onPopState)
       document.removeEventListener('click', handleInternalLinks)

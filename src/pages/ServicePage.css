@@ -39,10 +39,10 @@
 
 /* Divi deja el h3 en su tamaño base y la lista con el padding de .entry-content ul */
 .page-servicio .servicio-item { margin-bottom: 30px; }
-/* 22px/1.6 son los valores del original; el letter-spacing compensa que la Open Sans
-   variable de Google renderiza ~3% más ancha que la que sirve Divi. */
+/* El tamaño lo fija Divi: 22px, o 20px si la columna es angosta (ver index.css).
+   El letter-spacing compensa que la Open Sans variable de Google
+   renderiza ~3% más ancha que la que sirve Divi. */
 .page-servicio .servicio-item h3 {
-  font-size: 22px;
   font-weight: 700;
   line-height: 1.6em;
   letter-spacing: -0.35px;
