@@ -82,6 +82,36 @@
 .et_pb_button_0_tb_header:hover { letter-spacing: 1px !important; }
 .et_pb_button_0_tb_header::after { display: none !important; }
 
+/* Redes en la barra roja, a la izquierda del botón de cita. */
+.header-top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.header-top-actions .et_pb_button_0_tb_header_wrapper { width: auto; }
+
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-social a {
+  display: block;
+  line-height: 0;
+  color: #fff;
+  opacity: 0.85;
+  transition: opacity 300ms ease;
+}
+
+.header-social a:hover { opacity: 1; }
+.header-social svg { width: 18px; height: 18px; fill: currentColor; }
+
 /* ============================================================ HEADER: menú */
 
 .et_pb_section_1_tb_header.et_pb_section {
@@ -268,7 +298,7 @@
 .join-team-upload { margin-top: 29px; }.join-team-upload h3 { margin: 0 0 12px; padding: 0; color: #1f3d6d; font-family: 'Rubik', sans-serif; font-size: 16px; text-transform: uppercase; }.join-team-dropzone { position: relative; min-height: 155px; display: flex !important; flex-direction: column; justify-content: center; align-items: center; gap: 8px; border: 2px dashed #c5cbd2; background: #fff; color: #777 !important; text-align: center; }.join-team-dropzone input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }.join-team-upload-icon { color: #e02b20; font-size: 30px; line-height: 1; }.join-team-dropzone strong { color: #555; font-size: 14px; font-weight: 600; }.join-team-dropzone small { max-width: 430px; color: #999; font-size: 10px; line-height: 1.5; }.join-team-file-button { padding: 7px 13px; color: #fff; background: #1f3d6d; font-size: 11px; font-weight: 700; text-transform: uppercase; }
 .join-team-submit { display: block; margin: 27px 0 0 auto; padding: 13px 23px; border-radius: 3px; color: #fff; background: #e02b20; font-family: 'Rubik', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; transition: background .2s, transform .2s; }.join-team-submit:hover { background: #bd2118; transform: translateY(-1px); }.join-team-submit span { margin-left: 14px; font-size: 19px; }
 .join-team-success { min-height: 480px; display: grid; place-content: center; justify-items: center; text-align: center; }.join-team-check { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: #1f3d6d; font-size: 29px; }.join-team-success h3 { margin: 20px 0 8px; padding: 0; color: #1f3d6d; font-family: 'Khand', sans-serif; font-size: 34px; text-transform: uppercase; }.join-team-success p { color: #777; }.join-team-success button { margin-top: 15px; color: #e02b20; font-weight: 700; }
-.join-team-footer { padding: 32px 0; background: #1f3d6d; }.join-team-footer-inner { width: 80%; max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 28px; }.join-team-footer img { width: auto; height: 54px; filter: brightness(0) invert(1); }.join-team-footer p { margin: 0 0 0 auto; color: rgba(255,255,255,.7); font-size: 12px; }.join-team-footer-inner div { display: flex; gap: 8px; }.join-team-footer-inner div a { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: #fff; font-weight: 700; }
+.join-team-footer { padding: 32px 0; background: #1f3d6d; }.join-team-footer-inner { width: 80%; max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 28px; }.join-team-footer img { width: auto; height: 54px; filter: brightness(0) invert(1); }.join-team-footer p { margin: 0 0 0 auto; color: rgba(255,255,255,.7); font-size: 12px; }.join-team-footer-inner div { display: flex; gap: 8px; }.join-team-footer-inner div a { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: #fff; font-weight: 700; }.join-team-footer-inner div a svg { width: 14px; height: 14px; fill: currentColor; }
 @media only screen and (max-width: 980px) { .join-team-content { grid-template-columns: 1fr; gap: 40px; }.join-team-intro p { max-width: 600px; } }
 @media only screen and (max-width: 600px) { .join-team-hero-inner,.join-team-content,.join-team-footer-inner { width: 90%; }.join-team-hero { min-height: 240px; }.join-team-section { padding: 55px 0 70px; }.join-team-form { padding: 25px 18px 28px; }.join-team-fields { grid-template-columns: 1fr; gap: 17px; }.join-team-full { grid-column: auto; }.join-team-form-heading { display: block; }.join-team-form-heading span { display: block; margin-top: 7px; }.join-team-footer-inner { flex-wrap: wrap; }.join-team-footer p { width: 100%; margin: 5px 0 0; } }
 
@@ -303,6 +333,21 @@
   object-fit: cover;
   object-position: 27% 71%;
 }
+
+/* Slides cuadrados o verticales: la imagen se ve completa y el fondo la rellena. */
+.n2-ss-slide-background-image .n2-ss-blur {
+  object-fit: cover;
+  object-position: center;
+  filter: blur(34px) brightness(0.65);
+  transform: scale(1.18);
+}
+
+.n2-ss-slide-background-image .n2-ss-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.n2-thumbnail-dot img.n2-thumb-contain { object-fit: contain; background: #021827; }
 
 .n2-ss-layers-container {
   position: absolute;
@@ -452,6 +497,9 @@
 .et-social-facebook a::before { content: '\e093'; }
 .et-social-instagram a::before { content: '\e09a'; }
 
+/* El de TikTok es SVG, así que se ajusta al tamaño y color de los de fuente. */
+.et-social-tiktok svg { width: 22px; height: 22px; fill: currentColor; vertical-align: -0.22em; }
+
 #footer-info { float: none; text-align: center; color: #666; padding-bottom: 10px; }
 #footer-info a { font-weight: 700; color: #666; transition: opacity 400ms ease-in-out; }
 #footer-info a:hover { opacity: 0.7; }
@@ -528,33 +576,3 @@
   .wws-popup__open-btn span { display: none; }
   .wws-popup__open-btn svg { width: 30px; height: 30px; }
 }
-
-
-/* ============================================================ Barra social flotante */
-
-#icon_wrapper {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  z-index: 99999;
-}
-
-#icon_wrapper .awesome-social {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  margin-top: 2px;
-  color: #fff !important;
-  text-align: center;
-}
-
-#icon_wrapper .awesome-social svg { width: 16px; height: 16px; fill: currentColor; }
-
-#icon_wrapper .facebook-awesome-social { background: #3b5998; }
-
-#icon_wrapper .instagram-awesome-social {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-#icon_wrapper .envelope-awesome-social { background: #ccc; }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SiteHeader from './components/SiteHeader.jsx'
 import WhatsAppWidget from './components/WhatsAppWidget.jsx'
+import { socialLinks } from './socialLinks.js'
 
 function JoinTeam({ path }) {
   const [fileName, setFileName] = useState('')
@@ -61,7 +62,7 @@ function JoinTeam({ path }) {
           </div>
         </section>
       </main>
-      <footer className="join-team-footer"><div className="join-team-footer-inner"><img src="/assets/didasa.png" alt="Tecnicentro DIDASA" /><div><a href="https://www.facebook.com/tecnicentrodidasa1" target="_blank" rel="noreferrer">f</a><a href="https://www.instagram.com/tecnicentro_didasa/" target="_blank" rel="noreferrer">◎</a></div><p>Copyright © tecdidasa.com</p></div></footer>
+      <footer className="join-team-footer"><div className="join-team-footer-inner"><img src="/assets/didasa.png" alt="Tecnicentro DIDASA" /><div>{socialLinks.map((red) => (<a key={red.title} href={red.href} target="_blank" rel="noreferrer" aria-label={red.title}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={red.path} /></svg></a>))}</div><p>Copyright © tecdidasa.com</p></div></footer>
       <WhatsAppWidget />
     </div>
   )

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { normalizePath } from '../router.js'
+import { socialLinks } from '../socialLinks.js'
 
 const menuItems = [
   { label: 'Inicio', href: '/' },
@@ -82,10 +83,23 @@ function SiteHeader({ path }) {
           </div>
 
           <div className="et_pb_column et_pb_column_1_2 et_pb_column_2_tb_header et-last-child">
-            <div className="et_pb_button_module_wrapper et_pb_button_0_tb_header_wrapper et_pb_button_alignment_right et_pb_module">
-              <a className="et_pb_button et_pb_button_0_tb_header" href="#calendario">
-                Haz una cita!
-              </a>
+            <div className="header-top-actions">
+              <ul className="header-social">
+                {socialLinks.map((red) => (
+                  <li key={red.title}>
+                    <a href={red.href} target="_blank" rel="noreferrer" aria-label={red.title}>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d={red.path} />
+                      </svg>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="et_pb_button_module_wrapper et_pb_button_0_tb_header_wrapper et_pb_button_alignment_right et_pb_module">
+                <a className="et_pb_button et_pb_button_0_tb_header" href="#calendario">
+                  Haz una cita!
+                </a>
+              </div>
             </div>
           </div>
         </div>

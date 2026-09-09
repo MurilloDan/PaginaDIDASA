@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './About.css'
 import BottomStrip from '../components/BottomStrip.jsx'
 import PhotoCarousel from '../components/PhotoCarousel.jsx'
@@ -20,7 +21,18 @@ const galeria = [
   '/assets/galeria/WhatsApp-Image-2024-04-17-at-1.43.14-PM.jpeg',
 ]
 
-const valores = ['sERVICIO AL CLIENTE', 'HONESTIDAD', 'INTEGRIDAD', 'PROFESIONALISMO', 'COMPETENCIA TÉCNICA']
+const valores = ['sERVICIO AL CLIENTE', 'HONESTIDAD', 'INTEGRIDAD', 'COMPETENCIA TÉCNICA', 'PROFESIONALISMO']
+
+const PASO = 360 / valores.length
+
+/** Reparte elementos sobre la circunferencia, empezando arriba. */
+function posicionEnRueda(index, radio = 38, desfase = 0) {
+  const radianes = ((index * PASO - 90 + desfase) * Math.PI) / 180
+  return {
+    left: `${50 + radio * Math.cos(radianes)}%`,
+    top: `${50 + radio * Math.sin(radianes)}%`,
+  }
+}
 
 const fotosTaller = [
   ['/assets/mechanic-68.jpg', 1000, 786],
@@ -28,20 +40,42 @@ const fotosTaller = [
   ['/assets/mechanic-89.jpg', 1000, 660],
 ]
 
-function Video({ id, title }) {
+/**
+ * Muestra la portada del video y sólo carga el iframe de YouTube al hacer clic:
+ * así la sección nunca se ve vacía y la página no arrastra el reproductor completo.
+ */
+function Video({ id, poster, title }) {
+  const [reproduciendo, setReproduciendo] = useState(false)
+
   return (
     <div className="et_pb_module et_pb_video">
       <div className="et_pb_video_box">
-        <iframe
-          loading="lazy"
-          title={title}
-          width="1080"
-          height="608"
-          src={`https://www.youtube.com/embed/${id}?feature=oembed`}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
+        {reproduciendo ? (
+          <iframe
+            title={title}
+            width="1080"
+            height="608"
+            src={`https://www.youtube.com/embed/${id}?feature=oembed&autoplay=1`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        ) : (
+          <button
+            type="button"
+            className="video-portada"
+            onClick={() => setReproduciendo(true)}
+            aria-label={`Reproducir: ${title}`}
+          >
+            <img src={poster} alt="" width="640" height="360" loading="lazy" />
+            <span className="video-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5.5v13l11-6.5z" />
+              </svg>
+            </span>
+            <span className="video-titulo">{title}</span>
+          </button>
+        )}
       </div>
     </div>
   )
@@ -127,7 +161,7 @@ function About() {
                 <img src="/assets/mechanic-63.png" alt="" width="1068" height="166" />
               </span>
             </div>
-            <Video id="KKZWr16AamM" title="Atención personalizada" />
+            <Video id="KKZWr16AamM" poster="/assets/video-mision.jpg" title="Atención personalizada" />
           </div>
         </div>
       </div>
@@ -176,7 +210,7 @@ function About() {
                 <img src="/assets/mechanic-63.png" alt="" width="1068" height="166" loading="lazy" />
               </span>
             </div>
-            <Video id="3o0R9L6k6OY" title="Personal altamente calificado" />
+            <Video id="3o0R9L6k6OY" poster="/assets/video-vision.jpg" title="Personal altamente calificado" />
           </div>
         </div>
 
@@ -232,35 +266,39 @@ function About() {
               </div>
             </div>
 
-            <div className="et_pb_row_inner">
-              <div className="et_pb_column et_pb_column_4_4 et_pb_column_inner et-last-child">
-                <div className="et_pb_module et_pb_text valores-titulo et_pb_bg_layout_dark">
-                  <div className="et_pb_text_inner">
-                    <h2>
-                      <strong>VALORES</strong>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="valores-lista">
+            <div className="valores-rueda">
+              <div className="rueda-aro" aria-hidden="true" />
+              {/* Los radios caen entre valor y valor, y las tuercas van sobre ellos. */}
               {valores.map((valor, index) => (
-                <div
-                  className={`et_pb_module et_pb_blurb et_pb_text_align_center et_pb_bg_layout_dark${
-                    index === valores.length - 1 ? ' valor-centrado' : ''
-                  }`}
-                  key={valor}
-                >
-                  <div className="et_pb_blurb_content">
-                    <div className="et_pb_blurb_container">
-                      <h4 className="et_pb_module_header">
-                        <span>{valor}</span>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
+                <span
+                  className="rueda-radio"
+                  key={`radio-${valor}`}
+                  aria-hidden="true"
+                  style={{ transform: `rotate(${index * PASO - 90 + PASO / 2}deg)` }}
+                />
               ))}
+              {valores.map((valor, index) => (
+                <span
+                  className="rueda-tuerca"
+                  key={`tuerca-${valor}`}
+                  aria-hidden="true"
+                  style={posicionEnRueda(index, 20, PASO / 2)}
+                />
+              ))}
+
+              <div className="rueda-centro">
+                <h2>
+                  <strong>VALORES</strong>
+                </h2>
+              </div>
+
+              <ul className="rueda-valores">
+                {valores.map((valor, index) => (
+                  <li className="rueda-valor" key={valor} style={posicionEnRueda(index)}>
+                    {valor}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

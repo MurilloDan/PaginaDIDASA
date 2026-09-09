@@ -38,7 +38,16 @@ function HeroSlider() {
                     aria-hidden={index !== active}
                   >
                     <div className="n2-ss-slide-background-image">
-                      <img src={slide.image} alt="" loading={index === 0 ? 'eager' : 'lazy'} />
+                      {/* Los posts cuadrados se ven enteros; el desenfoque rellena los lados. */}
+                      {slide.contain && (
+                        <img className="n2-ss-blur" src={slide.image} alt="" aria-hidden="true" />
+                      )}
+                      <img
+                        className={slide.contain ? 'n2-ss-contain' : undefined}
+                        src={slide.image}
+                        alt=""
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                      />
                     </div>
                     <div className="n2-ss-layers-container">
                       <div className="n2-ss-item-content n2-ss-text">{slide.caption}</div>
@@ -76,7 +85,7 @@ function HeroSlider() {
                       aria-label={slide.caption}
                       onClick={() => go(index)}
                     >
-                      <img src={slide.thumb} alt="" loading="lazy" />
+                      <img className={slide.contain ? 'n2-thumb-contain' : undefined} src={slide.thumb} alt="" loading="lazy" />
                     </button>
                   ))}
                 </div>

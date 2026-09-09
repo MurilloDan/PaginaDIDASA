@@ -1,6 +1,6 @@
 import SiteHeader from './SiteHeader.jsx'
 import WhatsAppWidget from './WhatsAppWidget.jsx'
-import SocialSidebar from './SocialSidebar.jsx'
+import { TIKTOK_PATH } from '../socialLinks.js'
 
 function Layout({ children, path }) {
   return (
@@ -24,7 +24,7 @@ function Layout({ children, path }) {
               <ul className="et-social-icons">
                 <li className="et-social-icon et-social-facebook">
                   <a
-                    href="https://www.facebook.com/tecnicentrodidasa1"
+                    href="https://www.facebook.com/tecdidasa/?locale=es_LA"
                     className="icon"
                     target="_blank"
                     rel="noreferrer"
@@ -34,12 +34,26 @@ function Layout({ children, path }) {
                 </li>
                 <li className="et-social-icon et-social-instagram">
                   <a
-                    href="https://www.instagram.com/tecnicentro_didasa/"
+                    href="https://www.instagram.com/tecnicentrodidasa/"
                     className="icon"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <span>Instagram</span>
+                  </a>
+                </li>
+                {/* ETmodules no trae glifo de TikTok, por eso este va como SVG. */}
+                <li className="et-social-icon et-social-tiktok">
+                  <a
+                    href="https://www.tiktok.com/@tecnicentrodidasa"
+                    className="icon"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d={TIKTOK_PATH} />
+                    </svg>
+                    <span>TikTok</span>
                   </a>
                 </li>
               </ul>
@@ -60,7 +74,6 @@ function Layout({ children, path }) {
         </footer>
       </div>
 
-      <SocialSidebar />
       <WhatsAppWidget />
     </div>
   )
