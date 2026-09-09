@@ -20,7 +20,7 @@ const galeria = [
   '/assets/galeria/WhatsApp-Image-2024-04-17-at-1.43.14-PM.jpeg',
 ]
 
-const valores = ['sERVICIO AL CLIENTE', 'HONESTIDAD', 'INTEGRIDAD', 'COMPETENCIA TÉCNICA', 'PROFESIONALISMO']
+const valores = ['sERVICIO AL CLIENTE', 'HONESTIDAD', 'INTEGRIDAD', 'PROFESIONALISMO', 'COMPETENCIA TÉCNICA']
 
 const fotosTaller = [
   ['/assets/mechanic-68.jpg', 1000, 786],
@@ -33,7 +33,10 @@ function Video({ id, title }) {
     <div className="et_pb_module et_pb_video">
       <div className="et_pb_video_box">
         <iframe
+          loading="lazy"
           title={title}
+          width="1080"
+          height="608"
           src={`https://www.youtube.com/embed/${id}?feature=oembed`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
