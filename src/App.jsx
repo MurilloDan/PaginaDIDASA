@@ -8,6 +8,7 @@ import Quote from './pages/Quote.jsx'
 import Promos from './pages/Promos.jsx'
 import Repuestos from './pages/Repuestos.jsx'
 import ServicePage from './pages/ServicePage.jsx'
+import JoinTeam from './JoinTeam.jsx'
 import { services } from './pages/servicesData.js'
 import { handleInternalLinks, normalizePath, scrollToHashOnLoad } from './router.js'
 
@@ -18,6 +19,8 @@ const routes = {
   '/cotizar': { component: Quote, title: 'Cotizar - Tecnicentro DIDASA' },
   '/promociones': { component: Promos, title: 'Promociones - Tecnicentro DIDASA' },
   '/repuestos': { component: Repuestos, title: 'Repuestos - Tecnicentro DIDASA' },
+  // Trae su propio header y footer, por eso se monta fuera de Layout.
+  '/unete-al-equipo': { component: JoinTeam, title: 'Únete al Equipo - Tecnicentro DIDASA', standalone: true },
 }
 
 // Las 7 páginas de servicio comparten plantilla y sólo cambian de contenido.
@@ -50,6 +53,8 @@ function App() {
   }, [route])
 
   const Page = route.component
+
+  if (route.standalone) return <Page path={path} />
 
   return (
     <Layout path={path}>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import SiteHeader from './components/SiteHeader.jsx'
 import WhatsAppWidget from './components/WhatsAppWidget.jsx'
 
-function JoinTeam() {
+function JoinTeam({ path }) {
   const [fileName, setFileName] = useState('')
   const [sent, setSent] = useState(false)
 
@@ -13,7 +13,7 @@ function JoinTeam() {
 
   return (
     <div id="page-container" className="join-team-page">
-      <SiteHeader />
+      <SiteHeader path={path} />
       <main className="join-team-main">
         <section className="join-team-hero">
           <div className="join-team-hero-inner">
