@@ -1,5 +1,6 @@
 import SiteHeader from './SiteHeader.jsx'
 import WhatsAppWidget from './WhatsAppWidget.jsx'
+import SocialSidebar from './SocialSidebar.jsx'
 
 function Layout({ children, path }) {
   return (
@@ -59,6 +60,7 @@ function Layout({ children, path }) {
         </footer>
       </div>
 
+      <SocialSidebar />
       <WhatsAppWidget />
     </div>
   )

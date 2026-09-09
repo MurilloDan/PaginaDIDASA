@@ -61,15 +61,18 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin: 20px 0 0;
+  margin: 16px 0 13px;
   padding: 0;
   list-style: none;
 }
 
 .page-promociones .flex-control-nav li { line-height: 0; }
 
+/* MetaSlider deja el número dentro del enlace pero oculto */
 .page-promociones .flex-control-paging a {
   display: block;
+  overflow: hidden;
+  text-indent: -9999px;
   width: 11px;
   height: 11px;
   background: rgba(0, 0, 0, 0.5);

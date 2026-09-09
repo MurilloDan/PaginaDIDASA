@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Página "Sobre Nosotros" (extraída de tecdidasa.com/sobre-nosotros/)
+   ========================================================================== */
+
+/* ------------------------------------------------------- portada con tarjeta roja */
+
+.page-nosotros .et_pb_section_0.et_pb_section {
+  padding: 0 10vw 1px 0;
+  background-color: #eaeaf1 !important;
+}
+
+.page-nosotros .et_pb_section_0 > .et_pb_row { width: 100%; max-width: 100%; padding: 0; }
+
+.page-nosotros .et_pb_column_0 { padding-top: 0; }
+
+.page-nosotros .et_pb_image_0 { margin-right: -50vw !important; text-align: left; margin-left: 0; }
+
+.page-nosotros .et_pb_row_inner_0 {
+  max-width: 600px;
+  margin-top: 10vw !important;
+  padding: 80px 60px !important;
+  background-color: #c80000;
+  box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.page-nosotros .et_pb_text_0 h1 {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 80px;
+  line-height: 1em;
+  color: #fff;
+}
+
+.page-nosotros .et_pb_divider_0 { height: 10px; max-width: 100px; transform: skewX(-20deg); }
+
+.page-nosotros .et_pb_divider_0::before {
+  border-top-color: #ffffff;
+  border-top-style: double;
+  border-top-width: 10px;
+}
+
+.page-nosotros .et_pb_text_1 { line-height: 2em; font-weight: 600; padding-top: 5px !important; }
+.page-nosotros .et_pb_text_1 p { text-align: justify; }
+
+/* ------------------------------------------------------------ misión y visión */
+
+.page-nosotros .et_pb_section_1.et_pb_section {
+  padding-bottom: 0;
+  background-color: #eaeaf1 !important;
+}
+
+.page-nosotros div.et_pb_section.et_pb_section_2 {
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 0;
+  background-image: url('/assets/mechanic-19.png') !important;
+  background-color: #eaeaf1 !important;
+  padding: 0;
+}
+
+.page-nosotros .et_pb_row_0.et_pb_row,
+.page-nosotros .et_pb_row_2.et_pb_row {
+  width: 90%;
+  max-width: 1800px;
+  padding-left: 0 !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+.page-nosotros .et_pb_column_2,
+.page-nosotros .et_pb_column_7 { padding-top: 100px; padding-bottom: 40px; }
+
+.page-nosotros .seccion-titulo h2,
+.page-nosotros .et_pb_text_6 h2 {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+.page-nosotros .et_pb_divider_rojo { height: 10px; max-width: 100px; transform: skewX(-20deg); }
+
+.page-nosotros .et_pb_divider_rojo::before {
+  border-top-color: #f71635;
+  border-top-style: double;
+  border-top-width: 10px;
+}
+
+.page-nosotros .seccion-texto { line-height: 2em; font-weight: 600; }
+.page-nosotros .seccion-texto p { text-align: justify; }
+
+.page-nosotros .logo-strip { margin-bottom: -1px !important; text-align: right; margin-right: 0; }
+.page-nosotros .logo-strip img { max-height: 100px; width: auto; }
+
+.page-nosotros .et_pb_video,
+.page-nosotros .foto-taller .et_pb_image_wrap {
+  box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.page-nosotros .foto-taller { text-align: left; margin-left: 0; }
+
+.page-nosotros .et_pb_row_4.et_pb_row { margin-top: 10vw !important; }
+.page-nosotros .et_pb_text_6 { max-width: 812px; }
+
+/* ---------------------------------------------------------------- carrusel */
+
+.page-nosotros .brcr-carousel { position: relative; }
+.page-nosotros .brcr-viewport { overflow: hidden; }
+
+.page-nosotros .brcr-track {
+  display: flex;
+  /* speed 700 con easing ease-in-out, igual que el original */
+  transition: transform 700ms ease-in-out;
+}
+
+.page-nosotros .brcr-carousel-item { flex: 0 0 33.3333%; padding: 0 4px; }
+.page-nosotros .brcr-figure { margin: 0; line-height: 0; }
+.page-nosotros .brcr-figure img { width: 100%; height: auto; display: block; }
+
+.page-nosotros .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  color: #666;
+  background: #e5e5e5;
+  border-radius: 50%;
+  transition: background-color 200ms ease;
+}
+
+.page-nosotros .slick-arrow:hover { background: #d5d5d5; }
+.page-nosotros .slick-arrow svg { width: 12px; height: 12px; fill: currentColor; }
+.page-nosotros .slick-prev { left: -34px; }
+.page-nosotros .slick-next { right: -34px; }
+
+/* ------------------------------------------------------------------ valores */
+
+.page-nosotros .et_pb_section_3.et_pb_section {
+  padding: 0 10vw 0 0;
+  margin: 0;
+  background-color: #021827 !important;
+}
+
+.page-nosotros .et_pb_section_3 > .et_pb_row { width: 100%; max-width: 100%; padding: 0; }
+
+.page-nosotros .et_pb_column_11 { padding-top: 0; padding-bottom: 0; }
+.page-nosotros .et_pb_column_12 { padding-top: 100px; }
+
+.page-nosotros .et_pb_image_6 { text-align: left; margin-left: 0; }
+
+.page-nosotros .valores-intro { max-width: 520px; line-height: 2em; font-weight: 600; }
+.page-nosotros .valores-intro p { text-align: justify; color: #fff; }
+
+/* Divi separa las filas internas con su padding estándar */
+.page-nosotros .et_pb_section_3 .et_pb_row_inner { padding: 27px 0; }
+
+.page-nosotros .valores-titulo { padding-bottom: 11px; }
+
+.page-nosotros .valores-titulo h2 {
+  text-align: center;
+  color: #fff;
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2em;
+}
+
+.page-nosotros .valores-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px 20px;
+  max-width: 520px;
+  margin-top: 30px;
+}
+
+.page-nosotros .valores-lista .et_pb_module_header {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 2em;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.page-nosotros .valores-lista .valor-centrado { grid-column: 1 / -1; }
+
+/* ------------------------------------------------------------------ móviles */
+
+@media only screen and (max-width: 980px) {
+  .page-nosotros .et_pb_section_0.et_pb_section { padding-right: 0; }
+  .page-nosotros .et_pb_image_0 { margin-right: 0 !important; text-align: center; margin-left: auto; }
+  .page-nosotros .et_pb_image_0 img { width: auto; }
+  .page-nosotros .et_pb_column_1 { padding-left: 10vw; }
+  .page-nosotros .et_pb_row_inner_0 { padding: 60px 50px !important; margin-top: -40vw !important; }
+  .page-nosotros .et_pb_text_0 h1 { font-size: 60px; }
+  .page-nosotros .seccion-titulo h2,
+  .page-nosotros .et_pb_text_6 h2 { font-size: 40px; }
+  .page-nosotros .et_pb_section_3.et_pb_section { padding-right: 0; }
+  .page-nosotros .et_pb_column_12 { padding-top: 0; padding-left: 10vw; padding-right: 10vw; }
+  .page-nosotros .brcr-carousel-item { flex-basis: 50%; }
+  .page-nosotros .slick-prev { left: 4px; }
+  .page-nosotros .slick-next { right: 4px; }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-nosotros .et_pb_text_0 h1 { font-size: 45px; }
+  .page-nosotros .seccion-titulo h2,
+  .page-nosotros .et_pb_text_6 h2 { font-size: 30px; }
+  .page-nosotros .brcr-carousel-item { flex-basis: 100%; }
+  .page-nosotros .valores-lista { grid-template-columns: 1fr; gap: 24px; }
+}

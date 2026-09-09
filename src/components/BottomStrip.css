@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Bloque inferior "Reservación / Catálogo / Ubicación"
+   Se repite al pie de Sobre Nosotros y de todas las páginas de servicio.
+   ========================================================================== */
+
+.didasa-strip.et_pb_section {
+  background-position: center bottom 0;
+  background-repeat: no-repeat;
+  background-image: url('/assets/mechanic-34.png') !important;
+  background-color: #eaeaf1 !important;
+  padding: 8vw 0;
+}
+
+.didasa-strip .et_pb_row {
+  max-width: 1360px;
+  padding: 0 !important;
+  box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.didasa-strip .strip-col-red { background-color: #f71635; padding: 100px 40px; }
+
+.didasa-strip .strip-col-dark {
+  background-image: linear-gradient(180deg, rgba(2, 24, 39, 0.7) 0%, rgba(2, 24, 39, 0.6) 100%),
+    url('/assets/mechanic-87.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+}
+
+.didasa-strip .strip-col-light {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, #ffffff 100%),
+    url('/assets/mechanic-90.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+}
+
+.didasa-strip .et_pb_text { line-height: 2em; font-weight: 600; }
+
+.didasa-strip .et_pb_text h4 {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 1.2em;
+}
+
+.didasa-strip .strip-address p { text-align: justify; }
+
+.didasa-strip .et_pb_button_module_wrapper { margin-top: 60px !important; width: 100%; }
+.didasa-strip .strip-map-wrapper { margin-top: 65px !important; }
+
+.didasa-strip .et_pb_button {
+  padding: 12px 40px 12px 24px !important;
+  border-radius: 0;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  transform: skewX(-20deg);
+}
+
+.didasa-strip .strip-button-outline {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  background-color: rgba(255, 255, 255, 0);
+  transition: border 300ms ease 0ms;
+}
+
+.didasa-strip .strip-button-outline:hover { border-color: rgba(0, 0, 0, 0) !important; }
+
+.didasa-strip .strip-button-map {
+  color: #fff !important;
+  border-width: 0 !important;
+  background-color: #0251b8;
+  transform: skewX(-22deg);
+  transition: background-color 300ms ease 0ms;
+}
+
+.didasa-strip .strip-button-map:hover { background-color: #d10026; }
+
+@media only screen and (max-width: 980px) {
+  .didasa-strip .et_pb_text h4 { font-size: 30px; }
+  .didasa-strip .strip-col-red,
+  .didasa-strip .strip-col-dark,
+  .didasa-strip .strip-col-light { padding-top: 50px; padding-bottom: 50px; }
+}
+
+@media only screen and (max-width: 767px) {
+  .didasa-strip .et_pb_text h4 { font-size: 25px; }
+}
