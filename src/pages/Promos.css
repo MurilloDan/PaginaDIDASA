@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Página "Promociones" — carrusel MetaSlider (extraído de tecdidasa.com/promociones/)
+   ========================================================================== */
+
+.page-promociones .metaslider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-promociones .metaslider-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-promociones .metaslider-slides {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* animationSpeed:600 con easing lineal, igual que el original */
+  transition: transform 600ms linear;
+}
+
+.page-promociones .metaslider-slides li {
+  flex: 0 0 auto;
+  margin-right: 5px; /* itemMargin: 5 */
+}
+
+.page-promociones .metaslider-slides img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------ flechas */
+
+.page-promociones .flex-direction-nav a {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  margin-top: -12px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  transition: background-color 200ms ease;
+}
+
+.page-promociones .flex-direction-nav a:hover { background: rgba(0, 0, 0, 0.9); }
+.page-promociones .flex-direction-nav a svg { width: 13px; height: 13px; fill: #fff; }
+.page-promociones .flex-direction-nav .flex-prev { left: 10px; }
+.page-promociones .flex-direction-nav .flex-next { right: 10px; }
+
+/* ------------------------------------------------------------------- puntos */
+
+.page-promociones .flex-control-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-promociones .flex-control-nav li { line-height: 0; }
+
+.page-promociones .flex-control-paging a {
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.page-promociones .flex-control-paging a:hover { background: rgba(0, 0, 0, 0.7); }
+.page-promociones .flex-control-paging a.flex-active { background: rgba(0, 0, 0, 0.9); cursor: default; }

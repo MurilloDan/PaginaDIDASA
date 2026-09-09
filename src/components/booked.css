@@ -1,0 +1,123 @@
+/* Calendario de citas — réplica del plugin Booked (QuickCal) */
+
+.booked-calendar-shortcode-wrap { background: #fff; }
+
+.booked-calendar-wrap { position: relative; }
+
+.booked-calendar { background: #fff; font-size: 14px; }
+
+.booked-calendar .bc-head { background: #2371b1 !important; }
+
+.booked-calendar .bc-row.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 14px 15px;
+  color: #fff;
+}
+
+.booked-calendar .bc-row.top .monthName {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.booked-calendar .bc-row.top .page-left,
+.booked-calendar .bc-row.top .page-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.booked-calendar .bc-row.top .page-left { left: 12px; }
+.booked-calendar .bc-row.top .page-right { right: 12px; }
+.booked-calendar .bc-row.top .page-left:hover,
+.booked-calendar .bc-row.top .page-right:hover { opacity: 1; }
+
+.booked-calendar .bc-row.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #014163 !important;
+}
+
+.booked-calendar .bc-row.days .bc-col {
+  padding: 8px 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-color: #014163 !important;
+}
+
+.booked-calendar .bc-body { background: #fff; }
+
+.booked-calendar .bc-row.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.booked-calendar .bc-body .bc-col {
+  position: relative;
+  min-height: 96px;
+  padding: 16px 4px;
+  text-align: center;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.booked-calendar .bc-body .bc-col:nth-child(7n) { border-right: 0; }
+
+.booked-calendar .bc-body .bc-col .date {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.booked-calendar .bc-body .bc-col .date:hover { background: #2371b1; color: #fff; }
+
+.booked-calendar .bc-body .bc-col.prev-date,
+.booked-calendar .bc-body .bc-col.prev-month,
+.booked-calendar .bc-body .bc-col.next-month.prev-date { background: #fafafa; }
+
+.booked-calendar .bc-body .bc-col.prev-date .date {
+  color: #ccc;
+  cursor: default;
+  font-weight: 400;
+}
+
+.booked-calendar .bc-body .bc-col.prev-date .date:hover { background: none; color: #ccc; }
+
+.booked-calendar .bc-body .bc-col.today .date {
+  border-color: #2371b1;
+  color: #2371b1;
+  font-weight: 600;
+}
+
+.booked-calendar .bc-body .bc-col.next-month { background: #fafafa; }
+.booked-calendar .bc-body .bc-col.next-month .date { color: #ccc; }
+
+@media only screen and (max-width: 767px) {
+  .booked-calendar .bc-body .bc-col { min-height: 54px; padding: 10px 2px; }
+  .booked-calendar .bc-body .bc-col .date { width: 24px; height: 24px; font-size: 12px; }
+  .booked-calendar .bc-row.top .monthName { font-size: 16px; }
+}

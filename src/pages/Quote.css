@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Página "Cotizar" — formulario del plugin FSQM, tema Material teal
+   (extraído de tecdidasa.com/cotizar/)
+   ========================================================================== */
+
+.page-cotizar .ipt_fsqm_form_wrap {
+  max-width: 980px;
+  min-width: 240px;
+  margin: 0 auto;
+  color: #424242;
+  font-family: 'Roboto', 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.page-cotizar .ipt_fsqm_form_body { padding: 20px 22px 26px; }
+
+/* ------------------------------------------------------------- encabezado */
+
+.page-cotizar .ipt-form-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+}
+
+.page-cotizar .ipt-form-header h3 {
+  margin: 0;
+  padding: 0;
+  color: #424242;
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.page-cotizar .ipt-form-header .ipt-form-icon { color: #424242; line-height: 0; }
+.page-cotizar .ipt-form-header .ipt-form-icon svg { width: 26px; height: 26px; fill: currentColor; }
+
+.page-cotizar .ipt-form-badge {
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  background: #009688;
+  border-radius: 2px;
+}
+
+/* ----------------------------------------------------------------- campos */
+
+.page-cotizar .ipt-field { margin-bottom: 20px; }
+
+.page-cotizar .ipt-field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-cotizar .ipt-field-row > .ipt-field { flex: 1 1 260px; margin-bottom: 20px; }
+
+.page-cotizar .ipt-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  transition: border-color 200ms ease;
+}
+
+.page-cotizar .ipt-input-wrap:focus-within { border-color: #009688; }
+
+.page-cotizar .ipt-input-wrap svg {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  fill: #9e9e9e;
+}
+
+.page-cotizar .ipt-input-wrap input,
+.page-cotizar .ipt-input-wrap textarea {
+  flex: 1 1 auto;
+  width: 100%;
+  padding: 12px 0;
+  color: #424242;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.page-cotizar .ipt-input-wrap textarea { min-height: 64px; resize: vertical; }
+
+.page-cotizar .ipt-input-wrap input::placeholder,
+.page-cotizar .ipt-input-wrap textarea::placeholder { color: #9e9e9e; opacity: 1; }
+
+.page-cotizar .ipt-input-wrap--top { align-items: flex-start; padding-top: 12px; }
+.page-cotizar .ipt-input-wrap--top svg { margin-top: 2px; }
+.page-cotizar .ipt-input-wrap--top textarea { padding-top: 0; }
+
+/* --------------------------------------------------------------- etiquetas */
+
+.page-cotizar .ipt-label {
+  display: block;
+  margin-bottom: 16px;
+  color: #424242;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.page-cotizar .ipt-required { color: #009688; }
+
+.page-cotizar .ipt-subtitle {
+  display: block;
+  margin: -12px 0 14px;
+  color: #9e9e9e;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------- radios y casillas */
+
+.page-cotizar .ipt-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 26px;
+  margin-bottom: 6px;
+}
+
+.page-cotizar .ipt-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #757575;
+  font-size: 15px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.page-cotizar .ipt-option input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.page-cotizar .ipt-mark {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #9e9e9e;
+  transition: border-color 200ms ease, background-color 200ms ease;
+}
+
+.page-cotizar .ipt-mark--radio { border-radius: 50%; }
+.page-cotizar .ipt-mark--check { width: 18px; height: 18px; border-radius: 2px; }
+
+.page-cotizar .ipt-option input:checked + .ipt-mark { border-color: #009688; }
+.page-cotizar .ipt-option input:checked + .ipt-mark--check { background: #009688; }
+
+.page-cotizar .ipt-mark::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.page-cotizar .ipt-mark--radio::after {
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid #009688;
+  border-bottom: 2px solid #009688;
+  transform: rotate(-45deg);
+}
+
+.page-cotizar .ipt-mark--check::after {
+  top: 0;
+  left: 4px;
+  width: 6px;
+  height: 11px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.page-cotizar .ipt-option input:checked + .ipt-mark::after { opacity: 1; }
+.page-cotizar .ipt-option input:focus-visible + .ipt-mark { box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.25); }
+
+.page-cotizar .ipt-option-other { flex: 1 1 240px; min-width: 200px; }
+
+/* ------------------------------------------------------------------ envío */
+
+.page-cotizar .ipt_fsqm_form_button_container {
+  padding: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.page-cotizar .ipt-form-submit {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  color: #757575;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #ebebeb;
+  border: 0;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.page-cotizar .ipt-form-submit:hover { background: #009688; color: #fff; }
+
+.page-cotizar .ipt_fsqm_form_message_success {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.page-cotizar .ipt_fsqm_form_message_success h3 {
+  margin: 0 0 8px;
+  padding: 0;
+  color: #009688;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.page-cotizar .ipt_fsqm_form_message_success p { color: #757575; }
+
+@media only screen and (max-width: 767px) {
+  .page-cotizar .ipt-form-header h3 { font-size: 22px; }
+  .page-cotizar .ipt-field-row > .ipt-field { flex-basis: 100%; }
+}

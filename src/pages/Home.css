@@ -1,0 +1,368 @@
+/* ==========================================================================
+   Página de inicio — módulos Divi (extraídos de tecdidasa.com)
+   ========================================================================== */
+
+/* ============================================================ SECCIÓN 1: hero */
+
+.page-home div.et_pb_section.et_pb_section_1 {
+  background-image: linear-gradient(-67deg, #eaeaf1 18%, #ffffff 18%) !important;
+  background-color: #eaeaf1 !important;
+  padding: 0 0 100px;
+}
+
+.page-home .et_pb_row_0.et_pb_row {
+  width: 90%;
+  max-width: 1800px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+.page-home .et_pb_column_0 { padding-right: 50px; }
+
+.page-home .et_pb_divider_0 {
+  background-color: #e09900;
+  filter: hue-rotate(144deg) saturate(200%) brightness(199%);
+  backface-visibility: hidden;
+  height: 80px;
+  margin-bottom: 176px !important;
+  margin-left: -20vw !important;
+  transform: skewX(-22deg);
+}
+
+.page-home .et_pb_divider_0::before { border-top-color: #0251b8; border-top-width: 80px; }
+
+.page-home .et_pb_text_0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  transform: skewX(-6deg);
+}
+
+.page-home .et_pb_text_0 h1 {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 4vw;
+  line-height: 1em;
+  text-align: left;
+}
+
+.page-home .et_pb_divider_1,
+.page-home .et_pb_divider_2,
+.page-home .et_pb_divider_3 { height: 10px; max-width: 100px; transform: skewX(-20deg); }
+
+.page-home .et_pb_divider_1::before,
+.page-home .et_pb_divider_2::before,
+.page-home .et_pb_divider_3::before {
+  border-top-color: #f71635;
+  border-top-style: double;
+  border-top-width: 10px;
+}
+
+.page-home .et_pb_text_1 { line-height: 2em; font-weight: 600; font-size: 24px; }
+.page-home .et_pb_text_1 p { text-align: justify; }
+
+.page-home .et_pb_button_0_wrapper { width: 100%; }
+
+.page-home .et_pb_button_0 {
+  color: #fff !important;
+  border-width: 0 !important;
+  border-radius: 0;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  background-color: #e02b20;
+  padding: 15px 40px 15px 30px !important;
+  filter: hue-rotate(11deg) saturate(200%) brightness(200%);
+  backface-visibility: hidden;
+  transform: skewX(-22deg);
+  transition: background-color 300ms ease 0ms;
+}
+
+.page-home .et_pb_button_0:hover { background-color: #d10026; }
+
+.page-home .et_pb_image_0 { width: 100%; max-width: 100% !important; text-align: right; margin-right: 0; }
+.page-home .et_pb_image_0 .et_pb_image_wrap,
+.page-home .et_pb_image_0 img { width: 100%; }
+
+.page-home .et_pb_image_1 {
+  margin-top: -70% !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  width: 60%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 980px) {
+  .page-home div.et_pb_section.et_pb_section_1 { padding-bottom: 0; }
+  .page-home .et_pb_divider_0 { margin-bottom: 30px !important; }
+  .page-home .et_pb_text_0 h1 { font-size: 100px; }
+  .page-home .et_pb_image_0 { width: 70%; }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-home .et_pb_text_0 h1 { font-size: 50px; }
+  .page-home .et_pb_text_1 { font-size: 16px; }
+}
+
+.page-home /* ============================================================ SECCIÓN 2: iconos */
+
+.et_pb_section_2.et_pb_section { background-color: #eaeaf1 !important; }
+
+.page-home .et_pb_section_2 .et_pb_blurb .et_pb_module_header {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 1.2em;
+}
+
+.page-home .et_pb_section_2 .et_pb_main_blurb_image img { margin: 0 auto; }
+
+.page-home /* ============================================================ SECCIÓN 3: nosotros */
+
+.et_pb_section_3.et_pb_section { padding-bottom: 0; background-color: #eaeaf1 !important; }
+
+.page-home .et_pb_row_3.et_pb_row,
+.page-home .et_pb_row_6.et_pb_row { width: 90%; max-width: 1800px; }
+
+.page-home .et_pb_row_3.et_pb_row { margin-left: auto !important; margin-right: 0 !important; }
+
+.page-home .et_pb_text_2 h2,
+.page-home .et_pb_text_4 h2 {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+.page-home .et_pb_text_3 {
+  line-height: 2em;
+  font-weight: 600;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 29px !important;
+  margin-left: -9px !important;
+}
+
+.page-home .et_pb_text_3 p,
+.page-home .et_pb_text_9 p { text-align: justify; }
+
+.page-home .et_pb_column_10 { padding-top: 100px; padding-bottom: 40px; }
+
+.page-home .et_pb_image_2 { margin-bottom: -1px !important; text-align: right; margin-right: 0; }
+.page-home .et_pb_image_2 img { max-height: 100px; width: auto; }
+
+.page-home .et_pb_video_0 { width: 100%; box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1); }
+
+.page-home /* ============================================================ SECCIÓN 4: servicios */
+
+.et_pb_section_4.et_pb_section {
+  padding: 100px 0 54px;
+  background-color: #021827 !important;
+}
+
+.page-home .et_pb_section_4 .et_pb_blurb { font-weight: 600; line-height: 2em; }
+.page-home .et_pb_section_4 .et_pb_blurb p { line-height: 2em; }
+
+.page-home .et_pb_section_4 .et_pb_blurb .et_pb_module_header {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 1.2em;
+  padding-bottom: 0;
+}
+
+.page-home .et_pb_section_4 .et_pb_blurb .et-pb-icon { font-size: 20px; color: #f71635; }
+.page-home .et_pb_section_4 .et_pb_main_blurb_image { margin: 0 15px 0 0; }
+
+.page-home .et_pb_cta_0.et_pb_promo {
+  background-image: linear-gradient(180deg, #f71635 0%, rgba(247, 22, 53, 0.79) 100%),
+    url('/assets/mechanic-05.jpg');
+  padding: 120px 80px 80px !important;
+  box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(180px);
+}
+
+.page-home .et_pb_cta_0 .et_pb_promo_description div {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-align: left;
+  color: #fff;
+}
+
+.page-home .et_pb_cta_0 .et_pb_promo_button {
+  color: #f71635 !important;
+  border: 10px solid rgba(0, 0, 0, 0) !important;
+  border-radius: 0;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  padding-right: 2em;
+  padding-left: 0.7em;
+  background-color: #fff;
+  transition: background-color 300ms ease 0ms;
+}
+
+.page-home .et_pb_cta_0 .et_pb_promo_button:hover { background-color: rgba(255, 255, 255, 0.9); }
+
+.page-home /* ============================================================ SECCIÓN 5: cita */
+
+.et_pb_section_5.et_pb_section { padding-top: 0; padding-bottom: 0; }
+
+.page-home .et_pb_row_6.et_pb_row {
+  padding-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.page-home .et_pb_divider_4 {
+  height: 0;
+  margin-bottom: 0 !important;
+  width: 20vw;
+  transform: skewX(-22deg);
+}
+
+.page-home .et_pb_divider_4::before { border-top-color: #021827; border-top-width: 150px; }
+
+.page-home .et_pb_image_3 { text-align: left; margin-left: 0; }
+
+.page-home .et_pb_column_16 { padding-top: 200px; }
+
+.page-home .et_pb_text_5 { font-size: 23px; }
+
+.page-home .et_pb_text_5 h2 {
+  font-family: 'Advent Pro', Helvetica, Arial, Lucida, sans-serif;
+  font-size: 33px;
+  text-align: left;
+  text-shadow: 0.08em 0.08em 0 rgba(0, 0, 0, 0.4);
+}
+
+.page-home .et_pb_code_0 { box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3); }
+
+.page-home /* ============================================================ SECCIÓN 6: promos */
+
+div.et_pb_section.et_pb_section_6 {
+  background-position: center bottom 0;
+  background-repeat: no-repeat;
+  background-image: url('/assets/mechanic-34.png') !important;
+  background-color: #eaeaf1 !important;
+  padding: 8vw 0;
+}
+
+.page-home .et_pb_row_7.et_pb_row {
+  max-width: 1360px;
+  padding: 0 !important;
+  box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.page-home .et_pb_column_17 { background-color: #f71635; padding: 100px 40px; }
+
+.page-home .et_pb_column_18 {
+  background-image: linear-gradient(180deg, rgba(2, 24, 39, 0.7) 0%, rgba(2, 24, 39, 0.6) 100%),
+    url('/assets/mechanic-87.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+}
+
+.page-home .et_pb_column_19 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, #ffffff 100%),
+    url('/assets/mechanic-90.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+}
+
+.page-home .et_pb_text_6,
+.page-home .et_pb_text_7,
+.page-home .et_pb_text_8,
+.page-home .et_pb_text_9 { line-height: 2em; font-weight: 600; }
+
+.page-home .et_pb_text_6 h4,
+.page-home .et_pb_text_7 h4,
+.page-home .et_pb_text_8 h4,
+.page-home .et_pb_text_9 h4 {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 1.2em;
+}
+
+.page-home .et_pb_button_1_wrapper,
+.page-home .et_pb_button_2_wrapper { margin-top: 60px !important; width: 100%; }
+.page-home .et_pb_button_3_wrapper { margin-top: 65px !important; width: 100%; }
+
+.page-home .et_pb_button_1,
+.page-home .et_pb_button_2,
+.page-home .et_pb_button_3 { padding: 12px 40px 12px 24px !important; transform: skewX(-20deg); }
+
+.page-home .et_pb_button_1,
+.page-home .et_pb_button_2 {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  border-radius: 0;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  background-color: rgba(255, 255, 255, 0);
+  transition: border 300ms ease 0ms;
+}
+
+.page-home .et_pb_button_1:hover,
+.page-home .et_pb_button_2:hover { border-color: rgba(0, 0, 0, 0) !important; }
+
+.page-home .et_pb_button_3 {
+  color: #fff !important;
+  border-width: 0 !important;
+  border-radius: 0;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  background-color: #0251b8;
+  transform: skewX(-22deg);
+  transition: background-color 300ms ease 0ms;
+}
+
+.page-home .et_pb_button_3:hover { background-color: #d10026; }
+
+@media only screen and (max-width: 980px) {
+  .page-home .et_pb_row_3.et_pb_row { margin-left: auto !important; margin-right: 0 !important; }
+  .page-home .et_pb_text_3 h2 { font-size: 20px; }
+  .page-home .et_pb_image_2 { text-align: center; margin-left: auto; margin-right: auto; }
+  .page-home .et_pb_image_2 img,
+.page-home .et_pb_image_3 img { width: auto; }
+  .page-home .et_pb_cta_0.et_pb_promo { padding: 60px !important; transform: none; }
+  .page-home .et_pb_image_3 { width: 50%; }
+  .page-home .et_pb_text_6 h4,
+.page-home .et_pb_text_7 h4,
+.page-home .et_pb_text_8 h4,
+.page-home .et_pb_text_9 h4 { font-size: 30px; }
+  .page-home .et_pb_column_16 { padding-top: 0; padding-left: 10vw; }
+  .page-home .et_pb_column_17,
+.page-home .et_pb_column_18,
+.page-home .et_pb_column_19 { padding-top: 50px; padding-bottom: 50px; }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-home .et_pb_text_3 h2 { font-size: 18px; }
+  .page-home .et_pb_cta_0.et_pb_promo { padding: 40px !important; }
+  .page-home .et_pb_text_6 h4,
+.page-home .et_pb_text_7 h4,
+.page-home .et_pb_text_8 h4,
+.page-home .et_pb_text_9 h4 { font-size: 25px; }
+  .page-home .et_pb_column_16 { padding-right: 8vw; padding-left: 8vw; }
+}
+

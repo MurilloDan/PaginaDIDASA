@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Página "Contáctenos" — módulos Divi (extraídos de tecdidasa.com/contactenos/)
+   ========================================================================== */
+
+.page-contactenos div.et_pb_section.et_pb_section_0 {
+  background-image: linear-gradient(-67deg, #eaeaf1 20%, #ffffff 20%) !important;
+  background-color: #eaeaf1 !important;
+  padding: 0 0 100px;
+}
+
+.page-contactenos .et_pb_row_0.et_pb_row {
+  width: 90%;
+  max-width: 1800px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+.page-contactenos .et_pb_column_0 { padding-right: 50px; }
+
+/* ------------------------------------------------------------ columna izquierda */
+
+.page-contactenos .et_pb_divider_0 {
+  height: 80px;
+  margin-bottom: 60px !important;
+  margin-left: -20vw !important;
+  transform: skewX(-22deg);
+}
+
+.page-contactenos .et_pb_divider_0::before {
+  border-top-color: #c80000;
+  border-top-width: 80px;
+}
+
+.page-contactenos .et_pb_text_0 {
+  margin-bottom: 0 !important;
+  transform: skewX(-6deg);
+}
+
+.page-contactenos .et_pb_text_0 h1 {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 6vw;
+  line-height: 1em;
+  text-align: left;
+}
+
+.page-contactenos .et_pb_divider_1 {
+  height: 10px;
+  max-width: 100px;
+  transform: skewX(-20deg);
+}
+
+.page-contactenos .et_pb_divider_1::before {
+  border-top-color: #f71635;
+  border-top-style: double;
+  border-top-width: 10px;
+}
+
+.page-contactenos .et_pb_text_1 {
+  line-height: 2em;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+/* ---------------------------------------------------------- formulario Divi */
+
+.page-contactenos .et_pb_contact_form_container {
+  background-color: #c80000;
+  padding: 60px 40px;
+}
+
+.page-contactenos .et_pb_contact_main_title {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #fff !important;
+  line-height: 1.2em;
+  padding-bottom: 20px;
+}
+
+.page-contactenos .et_pb_contact_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-contactenos .et_pb_contact_field {
+  position: relative;
+  width: 100%;
+  margin: 0 0 30px !important;
+  padding: 0;
+}
+
+.page-contactenos .et_pb_contact_field_half { width: 49%; }
+
+.page-contactenos .et_pb_contact_form_label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-contactenos .input {
+  width: 100%;
+  padding: 16px 0;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5em;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0 solid rgba(255, 255, 255, 0.2);
+  border-bottom-width: 2px;
+  border-radius: 0;
+  outline: 0;
+  transition: background-color 300ms ease 0ms;
+}
+
+.page-contactenos .input::placeholder { color: #fff; font-weight: 600; font-size: 14px; opacity: 1; }
+.page-contactenos .input:focus { border-bottom-color: rgba(255, 255, 255, 0.6); }
+
+.page-contactenos textarea.input {
+  min-height: 140px;
+  resize: vertical;
+  display: block;
+}
+
+.page-contactenos .et_contact_bottom_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  width: 100%;
+}
+
+.page-contactenos .et_pb_contact_right p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  color: #fff !important;
+  font-size: 14px;
+}
+
+.page-contactenos .et_pb_contact_captcha {
+  width: 50px;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.page-contactenos .et_pb_contact_submit {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  border-radius: 0;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  padding: 0.3em 2em 0.3em 0.7em;
+  background-color: rgba(255, 255, 255, 0) !important;
+  transition: background-color 300ms ease 0ms;
+}
+
+.page-contactenos .et_pb_contact_submit:hover { background-color: #d10026 !important; }
+
+.page-contactenos .et-pb-contact-message {
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------- teléfonos */
+
+.page-contactenos .et_pb_blurb_0 .et_pb_blurb_content,
+.page-contactenos .et_pb_blurb_1 .et_pb_blurb_content,
+.page-contactenos .et_pb_blurb_2 .et_pb_blurb_content,
+.page-contactenos .et_pb_blurb_3 .et_pb_blurb_content {
+  max-width: 100%;
+  align-items: center;
+}
+
+.page-contactenos .et_pb_row_1 .et_pb_blurb .et_pb_module_header {
+  font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 45px;
+  color: #f71635 !important;
+  padding-bottom: 0;
+  line-height: 1em;
+}
+
+.page-contactenos .et_pb_blurb_1.et_pb_blurb .et_pb_module_header { font-size: 40px; }
+
+.page-contactenos .et_pb_row_1 .et_pb_blurb .et-pb-icon {
+  font-size: 35px;
+  color: #f71635;
+}
+
+/* ------------------------------------------------------------ videos y mapa */
+
+.page-contactenos .et_pb_video { width: 100%; }
+
+.page-contactenos .et_pb_row_5 { box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.3); }
+
+.page-contactenos .et_pb_code_0 iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+/* ------------------------------------------------------------------ móviles */
+
+@media only screen and (max-width: 980px) {
+  .page-contactenos .et_pb_section_0.et_pb_section { padding-bottom: 0; }
+  .page-contactenos .et_pb_divider_0 { margin-bottom: 30px !important; }
+  .page-contactenos .et_pb_text_0 h1 { font-size: 100px; }
+  .page-contactenos .et_pb_contact_main_title { font-size: 40px; }
+  .page-contactenos .et_pb_row_1 .et_pb_blurb .et_pb_module_header,
+  .page-contactenos .et_pb_blurb_1.et_pb_blurb .et_pb_module_header { font-size: 35px; }
+  .page-contactenos .et_pb_column_0 { padding-right: 0; }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-contactenos .et_pb_text_0 h1 { font-size: 50px; }
+  .page-contactenos .et_pb_text_1 { font-size: 16px; }
+  .page-contactenos .et_pb_contact_main_title,
+  .page-contactenos .et_pb_row_1 .et_pb_blurb .et_pb_module_header,
+  .page-contactenos .et_pb_blurb_1.et_pb_blurb .et_pb_module_header,
+  .page-contactenos .et_pb_row_1 .et_pb_blurb .et-pb-icon { font-size: 30px; }
+  .page-contactenos .et_pb_contact_field_half { width: 100%; }
+}
