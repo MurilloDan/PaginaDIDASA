@@ -250,7 +250,7 @@
 .page-nosotros .rueda-aro::before {
   content: '';
   position: absolute;
-  inset: -22px;
+  inset: -4%;
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 50%;
 }
@@ -287,7 +287,7 @@
   color: #fff;
   font-family: 'Khand', Helvetica, Arial, Lucida, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: clamp(18px, 5vw, 26px);
   letter-spacing: 1px;
   line-height: 1;
   text-align: center;
@@ -306,26 +306,27 @@
 .page-nosotros .rueda-tuerca {
   position: absolute;
   z-index: 2;
-  width: 9px;
-  height: 18px;
+  width: 1.8%;
+  height: 3.6%;
   transform: translate(-50%, -50%) skewX(-20deg);
   background: #f71635;
 }
 
 .page-nosotros .rueda-valores { margin: 0; padding: 0; list-style: none; }
 
+/* Medidas en % de la rueda para que nunca se salgan al encoger. */
 .page-nosotros .rueda-valor {
   position: absolute;
   z-index: 1;
-  width: 136px;
-  padding: 10px 6px;
+  width: 27%;
+  padding: 2% 1%;
   transform: translate(-50%, -50%);
   background: #021827;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+  font-size: clamp(9px, 2.2vw, 12px);
+  letter-spacing: 0.12em;
   line-height: 1.5;
   text-align: center;
 }

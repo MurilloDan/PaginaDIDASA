@@ -61,6 +61,28 @@ function JoinTeam({ path }) {
             </form>
           </div>
         </section>
+
+        <section className="join-team-cta">
+          <div className="join-team-cta-inner">
+            <div className="join-team-cta-intro">
+              <span className="join-team-line" />
+              <h2>Trabaja <em>con nosotros</em></h2>
+              <p>También puedes aplicar a nuestras vacantes en línea o seguir nuestras publicaciones de empleo.</p>
+            </div>
+            <div className="join-team-cta-links">
+              <a href="https://recruit.capgrupo.com/aplicar" target="_blank" rel="noreferrer">
+                <strong>Aplicar en línea</strong>
+                <small>recruit.capgrupo.com/aplicar</small>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://www.linkedin.com/company/caphn/posts/?feedView=all" target="_blank" rel="noreferrer">
+                <strong>Vacantes en LinkedIn</strong>
+                <small>linkedin.com/company/caphn</small>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
       <footer className="join-team-footer"><div className="join-team-footer-inner"><img src="/assets/didasa.png" alt="Tecnicentro DIDASA" /><div>{socialLinks.map((red) => (<a key={red.title} href={red.href} target="_blank" rel="noreferrer" aria-label={red.title}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={red.path} /></svg></a>))}</div><p>Copyright © tecdidasa.com</p></div></footer>
       <WhatsAppWidget />
