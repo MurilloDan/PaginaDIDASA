@@ -29,7 +29,7 @@
 }
 
 .page-contactenos .et_pb_divider_0::before {
-  border-top-color: #c80000;
+  border-top-color: #e22522;
   border-top-width: 80px;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .page-contactenos .et_pb_divider_1::before {
-  border-top-color: #f71635;
+  border-top-color: #e22522;
   border-top-style: double;
   border-top-width: 10px;
 }
@@ -69,7 +69,7 @@
 /* ---------------------------------------------------------- formulario Divi */
 
 .page-contactenos .et_pb_contact_form_container {
-  background-color: #c80000;
+  background-color: #e22522;
   padding: 60px 40px;
 }
 
@@ -172,7 +172,7 @@
   transition: background-color 300ms ease 0ms;
 }
 
-.page-contactenos .et_pb_contact_submit:hover { background-color: #d10026 !important; }
+.page-contactenos .et_pb_contact_submit:hover { background-color: #e22522 !important; }
 
 .page-contactenos .et-pb-contact-message {
   margin-bottom: 20px;
@@ -196,7 +196,7 @@
   font-style: italic;
   text-transform: uppercase;
   font-size: 45px;
-  color: #f71635 !important;
+  color: #e22522 !important;
   padding-bottom: 0;
   line-height: 1em;
 }
@@ -205,7 +205,7 @@
 
 .page-contactenos .et_pb_row_1 .et_pb_blurb .et-pb-icon {
   font-size: 35px;
-  color: #f71635;
+  color: #e22522;
 }
 
 /* ------------------------------------------------------------ videos y mapa */
@@ -219,6 +219,44 @@
   width: 100%;
   height: 450px;
   border: 0;
+}
+
+/* Recorta la barra roja inclinada y el título que sobresalen en móviles. */
+.page-contactenos { overflow-x: hidden; }
+
+/* ------------------------------------------- cómo llegar: videos en cuadrícula */
+
+.page-contactenos .contact-videos {
+  width: min(92%, 1200px);
+  margin: 56px auto 48px;
+}
+
+.page-contactenos .contact-videos-title {
+  margin: 0 0 24px;
+  padding-left: 14px;
+  border-left: 6px solid #e22522;
+  color: #0b1f2e;
+  font-family: 'Khand', Helvetica, Arial, sans-serif;
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.page-contactenos .contact-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.page-contactenos .contact-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(11, 31, 46, 0.14);
 }
 
 /* ------------------------------------------------------------------ móviles */
@@ -241,4 +279,166 @@
   .page-contactenos .et_pb_blurb_1.et_pb_blurb .et_pb_module_header,
   .page-contactenos .et_pb_row_1 .et_pb_blurb .et-pb-icon { font-size: 30px; }
   .page-contactenos .et_pb_contact_field_half { width: 100%; }
+  .page-contactenos .contact-videos-grid { grid-template-columns: 1fr; }
 }
+
+/* Contacto: mejora visual general */
+.page-contactenos .et_pb_contact_form_container {
+  border-radius: 14px;
+  box-shadow: 0 20px 44px rgba(11, 31, 46, 0.18);
+  overflow: hidden;
+}
+.page-contactenos .et_pb_contact_form_container .et_pb_contact_form { padding: 36px 40px; }
+.page-contactenos .et_pb_contact_form input,
+.page-contactenos .et_pb_contact_form textarea {
+  border-radius: 6px;
+  transition: box-shadow 200ms ease;
+}
+.page-contactenos .et_pb_contact_form input:focus,
+.page-contactenos .et_pb_contact_form textarea:focus { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35); outline: 0; }
+
+/* Teléfonos: tarjetas uniformes */
+.page-contactenos .et_pb_row_1 { gap: 18px; }
+.page-contactenos .et_pb_row_1 .et_pb_blurb {
+  padding: 22px 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(11, 31, 46, 0.1);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.page-contactenos .et_pb_row_1 .et_pb_blurb:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(11, 31, 46, 0.16); }
+
+/* Videos y mapa: contenedores con esquinas y fondo mientras cargan */
+.page-contactenos .contact-video { background: #0b1f2e; border-radius: 12px; overflow: hidden; }
+.page-contactenos .contact-video iframe { border-radius: 12px; }
+.page-contactenos .et_pb_code_0 { border-radius: 14px; overflow: hidden; box-shadow: 0 18px 40px rgba(11, 31, 46, 0.16); background: #e9edf2; }
+.page-contactenos .et_pb_code_0 iframe { border-radius: 14px; }
+
+/* Cómo llegar: encabezado un poco más marcado */
+.page-contactenos .contact-videos-title { font-size: clamp(34px, 3.8vw, 50px); }
+
+/* Teléfonos: una sola fila y números sin cortes */
+.page-contactenos .et_pb_row_1 { display: flex; flex-wrap: nowrap; }
+.page-contactenos .et_pb_row_1 > .et_pb_column { flex: 1 1 0; min-width: 0; width: auto; margin-right: 0; float: none; }
+.page-contactenos .et_pb_row_1 .et_pb_blurb { height: 100%; }
+.page-contactenos .et_pb_row_1 .et_pb_blurb .et_pb_module_header span,
+.page-contactenos .et_pb_row_1 .et_pb_blurb .et_pb_module_header { white-space: nowrap; }
+.page-contactenos .et_pb_blurb_1.et_pb_blurb .et_pb_module_header { font-size: clamp(22px, 2.2vw, 30px); }
+@media only screen and (max-width: 980px) {
+  .page-contactenos .et_pb_row_1 { flex-wrap: wrap; }
+  .page-contactenos .et_pb_row_1 > .et_pb_column { flex: 1 1 45%; }
+}
+.page-contactenos .et_pb_row_1 { align-items: stretch; }
+.page-contactenos .et_pb_row_1 > .et_pb_column > .et_pb_blurb { display: flex; align-items: center; min-height: 100%; box-sizing: border-box; }
+.page-contactenos .et_pb_row_1 .et_pb_blurb .et_pb_module_header { font-size: clamp(22px, 2.2vw, 30px) !important; }
+.page-contactenos .et_pb_row_1 .et_pb_blurb .et_pb_module_header span { font-size: inherit; }
+
+/* Parte superior dividida en dos columnas iguales: información y formulario */
+.page-contactenos .et_pb_section_0 > .et_pb_row_0 { display: flex; align-items: stretch; gap: 40px; }
+.page-contactenos .et_pb_section_0 .et_pb_column_0,
+.page-contactenos .et_pb_section_0 .et_pb_column_1 { flex: 1 1 0; width: auto; min-width: 0; margin: 0; padding: 0; float: none; }
+.page-contactenos .et_pb_section_0 .et_pb_column_0 { padding: 40px 20px 40px 0; }
+.page-contactenos .et_pb_section_0 .et_pb_column_1 { padding: 0; }
+
+/* Formulario: tarjeta más cuidada */
+.page-contactenos .et_pb_contact_form_container {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 44px 46px 40px !important;
+  border-radius: 16px;
+  box-shadow: 0 22px 50px rgba(11, 31, 46, 0.22);
+}
+.page-contactenos .et_pb_contact_main_title {
+  margin: 0 0 30px;
+  font-size: clamp(34px, 3.2vw, 46px) !important;
+  letter-spacing: 0.5px;
+  line-height: 1.05;
+}
+.page-contactenos .et_pb_contact_form { display: flex; flex-wrap: wrap; gap: 16px 18px; }
+.page-contactenos .et_pb_contact_field_half { width: calc(50% - 9px) !important; margin: 0 !important; }
+.page-contactenos .et_pb_contact_field_half:nth-child(odd) { }
+.page-contactenos .et_pb_contact_form .et_pb_contact_field { width: 100% !important; margin: 0 !important; }
+.page-contactenos .et_pb_contact_form_label { font-size: 13px !important; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; opacity: 0.95; }
+.page-contactenos .et_pb_contact_form input,
+.page-contactenos .et_pb_contact_form textarea {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 8px;
+  color: #fff !important;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+.page-contactenos .et_pb_contact_form input::placeholder,
+.page-contactenos .et_pb_contact_form textarea::placeholder { color: rgba(255, 255, 255, 0.7); }
+.page-contactenos .et_pb_contact_form input:focus,
+.page-contactenos .et_pb_contact_form textarea:focus { background: rgba(255, 255, 255, 0.2) !important; border-color: #fff !important; }
+.page-contactenos .et_pb_contact_form textarea { min-height: 120px; }
+.page-contactenos .et_pb_contact_form_container .et_pb_contact_submit,
+.page-contactenos .et_pb_contact_form .et_pb_contact_submit {
+  background: #0b1f2e !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 8px;
+  padding: 14px 36px !important;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+.page-contactenos .et_pb_contact_form_container .et_pb_contact_submit:hover { background: #fff !important; color: #e22522 !important; transform: translateY(-2px); }
+@media only screen and (max-width: 980px) {
+  .page-contactenos .et_pb_section_0 > .et_pb_row_0 { flex-direction: column; gap: 30px; }
+  .page-contactenos .et_pb_section_0 .et_pb_column_0 { padding: 20px 0; }
+  .page-contactenos .et_pb_contact_form_container { padding: 30px 22px !important; }
+  .page-contactenos .et_pb_contact_field_half { width: 100% !important; }
+}
+
+/* Columna de información más a la izquierda */
+.page-contactenos .et_pb_section_0 .et_pb_column_0 { margin-left: -100px; }
+
+/* Haz tu cita: calendario más compacto y menos espacio en blanco */
+.page-contactenos .et_pb_section_5.et_pb_section { padding: 0 !important; }
+.page-contactenos .et_pb_row_6 { align-items: stretch; }
+.page-contactenos .et_pb_column_16 { padding-top: 40px !important; padding-bottom: 40px !important; }
+.page-contactenos .et_pb_text_5 h2 { font-size: 30px; }
+.page-contactenos .et_pb_text_5 p { font-size: 16px; line-height: 1.5em; margin-bottom: 14px; }
+.page-contactenos .booked-calendar-shortcode-wrap { max-width: 460px; }
+.page-contactenos .booked-calendar .bc-body .bc-col { min-height: 0; }
+.page-contactenos .bc-cita { margin-top: 14px; }
+.page-contactenos .et_pb_row_6 { align-items: flex-start; }
+.page-contactenos .et_pb_image_3 .et_pb_image_wrap img { width: 100%; height: 460px; object-fit: cover; display: block; }
+.page-contactenos .et_pb_image_3 { margin-bottom: 0 !important; }
+.page-contactenos .booked-calendar-wrap.large { width: 100%; max-width: 460px; }
+.page-contactenos .booked-calendar-shortcode-wrap { width: 100%; }
+.page-contactenos .et_pb_section_5 .et_pb_code_0 { background: transparent !important; box-shadow: none !important; width: 100%; max-width: 460px; overflow: visible; }
+
+/* Calendario de "Haz tu cita": sin fondo gris y un poco más grande */
+.page-contactenos .et_pb_module.et_pb_code:has(.booked-calendar-shortcode-wrap) {
+  background: transparent !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  max-width: 560px !important;
+  overflow: visible !important;
+}
+.page-contactenos .booked-calendar-shortcode-wrap { max-width: 560px; }
+.page-contactenos .booked-calendar-wrap.large { max-width: 560px; }
+.page-contactenos .booked-calendar { font-size: 16px; }
+.page-contactenos .booked-calendar .bc-head .monthName,
+.page-contactenos .booked-calendar .bc-head { font-size: 17px; }
+.page-contactenos .booked-calendar .bc-body .bc-col { min-height: 60px; }
+.page-contactenos .bc-cita-boton { padding: 16px 52px; }
+
+/* Formulario: tarjeta más pequeña y separada del borde de la pantalla */
+.page-contactenos .et_pb_section_0 .et_pb_column_1 { padding: 40px 60px 40px 0 !important; }
+.page-contactenos .et_pb_contact_form_container {
+  height: auto !important;
+  max-width: 480px;
+  margin: 0 0 0 auto;
+  padding: 30px 30px 28px !important;
+}
+.page-contactenos .et_pb_contact_main_title { margin-bottom: 18px !important; font-size: 34px !important; }
+.page-contactenos .et_pb_contact_form { gap: 12px 14px; }
+.page-contactenos .et_pb_contact_form input,
+.page-contactenos .et_pb_contact_form textarea { padding: 10px 12px; }
+.page-contactenos .et_pb_contact_form textarea { min-height: 96px; }
+.page-contactenos .et_pb_section_0 .et_pb_column_1 { padding-right: 140px !important; }

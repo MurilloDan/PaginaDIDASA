@@ -63,7 +63,13 @@ function Promos() {
 
   return (
     <div className="page-promociones">
+      <header className="promos-header">
+        <h1 className="promos-title">Promociones del mes</h1>
+      </header>
+
       <div className="et_pb_section et_pb_section_0 et_section_regular">
+        <div className="promos-layout">
+          <div className="promos-carrusel">
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0 et-last-child">
             <div className="et_pb_module et_pb_code et_pb_code_0">
@@ -150,6 +156,10 @@ function Promos() {
               </div>
             </div>
           </div>
+        </div>
+          </div>
+
+
         </div>
       </div>
     </div>

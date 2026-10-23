@@ -17,10 +17,10 @@
   box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
-.didasa-strip .strip-col-red { background-color: #f71635; padding: 100px 40px; }
+.didasa-strip .strip-col-red { background-color: #e22522; padding: 100px 40px; }
 
 .didasa-strip .strip-col-dark {
-  background-image: linear-gradient(180deg, rgba(2, 24, 39, 0.7) 0%, rgba(2, 24, 39, 0.6) 100%),
+  background-image: linear-gradient(180deg, rgba(11, 31, 46, 0.7) 0%, rgba(11, 31, 46, 0.6) 100%),
     url('/assets/mechanic-87.jpg');
   background-size: cover;
   background-position: center;
@@ -72,12 +72,12 @@
 .didasa-strip .strip-button-map {
   color: #fff !important;
   border-width: 0 !important;
-  background-color: #0251b8;
+  background-color: #0b1f2e;
   transform: skewX(-22deg);
   transition: background-color 300ms ease 0ms;
 }
 
-.didasa-strip .strip-button-map:hover { background-color: #d10026; }
+.didasa-strip .strip-button-map:hover { background-color: #e22522; }
 
 @media only screen and (max-width: 980px) {
   .didasa-strip .et_pb_text h4 { font-size: 30px; }

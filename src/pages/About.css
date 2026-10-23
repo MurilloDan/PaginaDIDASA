@@ -6,7 +6,7 @@
 
 .page-nosotros .et_pb_section_0.et_pb_section {
   padding: 0 10vw 1px 0;
-  background-color: #eaeaf1 !important;
+  background-color: #f4f4f4 !important;
 }
 
 .page-nosotros .et_pb_section_0 > .et_pb_row { width: 100%; max-width: 100%; padding: 0; }
@@ -19,7 +19,7 @@
   max-width: 600px;
   margin-top: 10vw !important;
   padding: 80px 60px !important;
-  background-color: #c80000;
+  background-color: #e22522;
   box-shadow: 6px 28px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -47,7 +47,7 @@
 
 .page-nosotros .et_pb_section_1.et_pb_section {
   padding-bottom: 0;
-  background-color: #eaeaf1 !important;
+  background-color: #f4f4f4 !important;
 }
 
 .page-nosotros div.et_pb_section.et_pb_section_2 {
@@ -55,7 +55,7 @@
   background-repeat: no-repeat;
   background-position: right 0 bottom 0;
   background-image: url('/assets/mechanic-19.png') !important;
-  background-color: #eaeaf1 !important;
+  background-color: #f4f4f4 !important;
   padding: 0;
 }
 
@@ -87,7 +87,7 @@
 .page-nosotros .et_pb_divider_rojo { height: 10px; max-width: 100px; transform: skewX(-20deg); }
 
 .page-nosotros .et_pb_divider_rojo::before {
-  border-top-color: #f71635;
+  border-top-color: #e22522;
   border-top-style: double;
   border-top-width: 10px;
 }
@@ -113,7 +113,7 @@
   border: 0;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #021827;
+  background: #1a1a1a;
   cursor: pointer;
 }
 
@@ -129,7 +129,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(2, 24, 39, 0) 45%, rgba(2, 24, 39, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(11, 31, 46, 0) 45%, rgba(11, 31, 46, 0.85) 100%);
 }
 
 .page-nosotros .video-portada:hover img { transform: scale(1.04); }
@@ -145,7 +145,7 @@
   height: 68px;
   margin: -34px 0 0 -34px;
   border-radius: 50%;
-  background: #f71635;
+  background: #e22522;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   transition: transform 300ms ease;
 }
@@ -212,15 +212,15 @@
 /* ------------------------------------------------------------------ valores */
 
 .page-nosotros .et_pb_section_3.et_pb_section {
-  padding: 0 10vw 0 0;
+  padding: 0 0 60px;
   margin: 0;
-  background-color: #021827 !important;
+  background-color: #1a1a1a !important;
 }
 
 .page-nosotros .et_pb_section_3 > .et_pb_row { width: 100%; max-width: 100%; padding: 0; }
 
 .page-nosotros .et_pb_column_11 { padding-top: 0; padding-bottom: 0; }
-.page-nosotros .et_pb_column_12 { padding-top: 100px; }
+.page-nosotros .et_pb_column_12 { padding-top: 40px; width: 100%; max-width: 760px; margin: 0 auto; float: none; }
 
 .page-nosotros .et_pb_image_6 { text-align: left; margin-left: 0; }
 
@@ -228,7 +228,7 @@
 .page-nosotros .valores-intro p { text-align: justify; color: #fff; }
 
 /* Divi separa las filas internas con su padding estándar */
-.page-nosotros .et_pb_section_3 .et_pb_row_inner { padding: 27px 0; }
+.page-nosotros .et_pb_section_3 .et_pb_row_inner { padding: 0; }
 
 /* La rueda: el título va en el buje y los valores repartidos en la circunferencia. */
 
@@ -278,7 +278,7 @@
   transform: translate(-50%, -50%);
   border: 2px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
-  background: #021827;
+  background: #1a1a1a;
 }
 
 .page-nosotros .rueda-centro h2 {
@@ -299,7 +299,7 @@
   width: 44px;
   height: 6px;
   margin: 9px auto 0;
-  border-top: 6px double #f71635;
+  border-top: 6px double #e22522;
   transform: skewX(-20deg);
 }
 
@@ -309,7 +309,7 @@
   width: 1.8%;
   height: 3.6%;
   transform: translate(-50%, -50%) skewX(-20deg);
-  background: #f71635;
+  background: #e22522;
 }
 
 .page-nosotros .rueda-valores { margin: 0; padding: 0; list-style: none; }
@@ -321,7 +321,7 @@
   width: 27%;
   padding: 2% 1%;
   transform: translate(-50%, -50%);
-  background: #021827;
+  background: #1a1a1a;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
@@ -329,6 +329,38 @@
   letter-spacing: 0.12em;
   line-height: 1.5;
   text-align: center;
+  cursor: default;
+  transition: background-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+  animation: valor-in 700ms cubic-bezier(0.2, 0.7, 0.3, 1) backwards;
+}
+
+/* Entrada en cascada, como los botones que aparecen uno tras otro */
+.page-nosotros .rueda-valor:nth-child(1) { animation-delay: 100ms; }
+.page-nosotros .rueda-valor:nth-child(2) { animation-delay: 250ms; }
+.page-nosotros .rueda-valor:nth-child(3) { animation-delay: 400ms; }
+.page-nosotros .rueda-valor:nth-child(4) { animation-delay: 550ms; }
+.page-nosotros .rueda-valor:nth-child(5) { animation-delay: 700ms; }
+
+/* Al pasar el cursor el valor se eleva y se enciende en rojo, como un botón */
+.page-nosotros .rueda-valor:hover {
+  background: #e22522;
+  box-shadow: 0 10px 24px rgba(226, 37, 34, 0.35);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+@keyframes valor-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-nosotros .rueda-valor { animation: none; transition: none; }
 }
 
 /* ------------------------------------------------------------------ móviles */
@@ -356,3 +388,278 @@
   .page-nosotros .brcr-carousel-item { flex-basis: 100%; }
   .page-nosotros .valores-rueda { max-width: 100%; }
 }
+
+/* Portada: texto y foto del equipo lado a lado */
+.page-nosotros .et_pb_section_0 > .et_pb_row { display: flex; align-items: center; gap: 40px; }
+.page-nosotros .about-hero-photo { display: flex; justify-content: center; }
+.page-nosotros .about-hero-photo img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(26, 26, 26, 0.18);
+}
+@media only screen and (max-width: 980px) {
+  .page-nosotros .et_pb_section_0 > .et_pb_row { flex-direction: column; }
+}
+.page-nosotros .et_pb_section_0 > .et_pb_row { flex-wrap: nowrap; }
+.page-nosotros .et_pb_section_0 > .et_pb_row > .et_pb_column { flex: 1 1 0; width: auto; min-width: 0; margin-right: 0; float: none; }
+
+/* Galería de inicio: todas las fotos con la misma proporción */
+.page-nosotros .about-gallery { padding: 48px 0 24px; background: #f4f4f4; }
+.page-nosotros .brcr-figure img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.page-nosotros .about-gallery { overflow: hidden; }
+.page-nosotros .about-gallery .brcr-carousel { width: 96%; margin: 0 auto; }
+.page-nosotros .about-gallery .brcr-viewport { width: 100%; }
+
+/* Misión y visión: texto legible, fotos del taller y menos espacio sobrante */
+.page-nosotros .et_pb_section_1.et_pb_section,
+.page-nosotros .et_pb_section_2.et_pb_section { padding-top: 40px; padding-bottom: 40px; }
+.page-nosotros .et_pb_row_4.et_pb_row { margin-top: 24px !important; }
+.page-nosotros .seccion-texto { font-size: 17px; font-weight: 400; line-height: 1.85; color: #444; }
+.page-nosotros .seccion-texto p { text-align: left; margin: 0; }
+.page-nosotros .foto-relacion { margin: 0; }
+.page-nosotros .foto-relacion img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(26, 26, 26, 0.16);
+}
+
+/* Portada sin imagen: el bloque rojo ocupa el ancho y el texto va centrado */
+.page-nosotros .et_pb_section_0.et_pb_section { background: #e22522 !important; padding: 90px 0 !important; }
+.page-nosotros .et_pb_section_0 > .et_pb_row { justify-content: center; }
+.page-nosotros .et_pb_section_0 .et_pb_column_1 { width: 100%; max-width: 860px; margin: 0 auto; float: none; padding: 0; }
+.page-nosotros .et_pb_section_0 .et_pb_row_inner_0 { padding: 0 !important; background: transparent; }
+.page-nosotros .et_pb_section_0 .et_pb_text_0 h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.02; text-align: center; color: #fff; }
+.page-nosotros .et_pb_section_0 .et_pb_divider_0 { margin: 0 auto; }
+.page-nosotros .et_pb_section_0 .et_pb_text_1 { text-align: center; font-size: 18px; line-height: 1.8; color: #fff; }
+.page-nosotros .et_pb_section_0 .et_pb_text_1 p { text-align: center; }
+.page-nosotros .et_pb_section_0 .et_pb_column_inner,
+.page-nosotros .et_pb_section_0 .et_pb_row_inner,
+.page-nosotros .et_pb_section_0 .et_pb_text_inner,
+.page-nosotros .et_pb_section_0 .et_pb_module { background: transparent !important; box-shadow: none !important; }
+.page-nosotros .et_pb_section_0.et_pb_section { padding: 70px 0 !important; }
+.page-nosotros .et_pb_section_0 .et_pb_text_1 { margin-bottom: 0 !important; }
+
+/* Portada: texto a la izquierda y foto del equipo a la derecha */
+.page-nosotros .et_pb_section_0 > .et_pb_row { display: flex; align-items: center; gap: 48px; }
+.page-nosotros .et_pb_section_0 .about-hero-text { flex: 1 1 0; min-width: 0; width: auto; max-width: none; float: none; padding: 0; margin: 0; }
+.page-nosotros .et_pb_section_0 .about-hero-photo { flex: 1 1 0; min-width: 0; width: auto; float: none; padding: 0; margin: 0; }
+.page-nosotros .et_pb_section_0 .about-hero-photo img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3); }
+.page-nosotros .et_pb_section_0 .et_pb_text_0 h1,
+.page-nosotros .et_pb_section_0 .et_pb_text_1 { text-align: left; }
+.page-nosotros .et_pb_section_0 .et_pb_text_1 p { text-align: left; }
+.page-nosotros .et_pb_section_0 .et_pb_divider_0 { margin: 0; }
+.page-nosotros .et_pb_section_0 .et_pb_text_1 { font-size: 17px; line-height: 1.75; }
+@media only screen and (max-width: 980px) {
+  .page-nosotros .et_pb_section_0 > .et_pb_row { flex-direction: column; }
+}
+.page-nosotros .et_pb_section_0 .about-hero-text { order: 0; }
+.page-nosotros .et_pb_section_0 .about-hero-photo { order: 1; }
+.page-nosotros .et_pb_section_0 > .et_pb_row { width: 88%; max-width: 1240px; margin: 0 auto; padding: 0; }
+.page-nosotros .et_pb_section_0 .about-hero-text { padding-left: 0; }
+
+/* ------------------------------------------- historia y propuesta de valor */
+.page-nosotros .about-info { padding: 88px 0; background: #f4f4f4; }
+.page-nosotros .about-info-inner { width: 88%; max-width: 1180px; margin: 0 auto; }
+.page-nosotros .about-info-title {
+  margin: 0;
+  color: #1a1a1a;
+  font-family: 'Khand', Helvetica, Arial, sans-serif;
+  font-size: clamp(38px, 4.4vw, 60px);
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.page-nosotros .about-info-divider { width: 110px; height: 6px; margin: 18px 0 40px; border-top: 3px double #e22522; }
+.page-nosotros .about-lead { margin: 0; color: #1a1a1a; font-size: 22px; font-weight: 600; line-height: 1.6; }
+.page-nosotros .about-historia { background: #fff; }
+.page-nosotros .about-historia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.page-nosotros .about-historia-body p { margin: 0 0 18px; color: #444; font-size: 17px; line-height: 1.8; }
+.page-nosotros .about-propuesta-intro { margin-bottom: 40px; max-width: 760px; font-size: 18px; font-weight: 400; color: #444; }
+.page-nosotros .about-pilares { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.page-nosotros .about-pilar {
+  padding: 34px 32px 34px 36px;
+  background: #fff;
+  border-left: 6px solid #e22522;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(26, 26, 26, 0.08);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.page-nosotros .about-pilar:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(26, 26, 26, 0.14); }
+.page-nosotros .about-pilar-numero { display: block; margin-bottom: 8px; color: #e22522; font-family: 'Khand', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 2px; }
+.page-nosotros .about-pilar h3 { margin: 0 0 12px; color: #1a1a1a; font-family: 'Khand', sans-serif; font-size: 26px; font-weight: 700; line-height: 1.2; text-transform: uppercase; }
+.page-nosotros .about-pilar p { margin: 0; color: #444; font-size: 16px; line-height: 1.75; }
+@media only screen and (max-width: 980px) {
+  .page-nosotros .about-historia-grid,
+  .page-nosotros .about-pilares { grid-template-columns: 1fr; gap: 32px; }
+  .page-nosotros .about-info { padding: 60px 0; }
+}
+
+/* Portada: quitar el espacio sobrante sobre y bajo el bloque rojo */
+.page-nosotros .et_pb_section_0.et_pb_section { padding: 40px 0 !important; }
+.page-nosotros .et_pb_section_0 .et_pb_row_inner_0 { margin-top: 0 !important; }
+.page-nosotros .et_pb_section_0 .about-hero-text { align-self: center; }
+.page-nosotros .et_pb_section_0.et_pb_section { padding-bottom: 0 !important; }
+.page-nosotros .et_pb_section_0 .et_pb_text_1 p:last-child { margin-bottom: 0; }
+.page-nosotros .about-historia .about-lead,
+.page-nosotros .about-historia-body p { text-align: justify; text-justify: inter-word; }
+
+/* Propuesta de valor: fondo rojo y cinta de pilares detenible con clic */
+.page-nosotros .about-propuesta { background: #e22522; overflow: hidden; }
+.page-nosotros .about-propuesta .about-info-title,
+.page-nosotros .about-propuesta .about-propuesta-intro { color: #fff; }
+.page-nosotros .about-propuesta .about-info-divider { border-top-color: #fff; }
+.page-nosotros .about-propuesta .about-pilar-numero { color: #e22522; }
+.page-nosotros .about-propuesta .about-pilar { border-left-color: #1a1a1a; }
+
+.page-nosotros .about-pilares-cinta {
+  overflow: hidden;
+  cursor: pointer;
+  padding: 12px 0 28px;
+  width: 100%;
+}
+.page-nosotros .about-pilares-cinta:focus-visible { outline: 3px solid #fff; outline-offset: 6px; }
+.page-nosotros .about-pilares-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: pilares-cinta 40s linear infinite;
+}
+.page-nosotros .about-pilares-track.is-paused { animation-play-state: paused; }
+.page-nosotros .about-pilares-track .about-pilar {
+  flex: 0 0 340px;
+  width: 340px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+.page-nosotros .about-pilares-track .about-pilar:hover { transform: none; }
+@keyframes pilares-cinta {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 12px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-nosotros .about-pilares-track { animation: none; }
+}
+@media only screen and (max-width: 980px) {
+  .page-nosotros .about-pilares-track .about-pilar { flex-basis: 280px; width: 280px; }
+}
+
+/* Propuesta de valor: menos espacio rojo, texto más legible y cinta a todo el ancho */
+.page-nosotros .about-propuesta { padding: 56px 0 48px; }
+.page-nosotros .about-propuesta .about-info-divider { margin: 14px 0 26px; }
+.page-nosotros .about-propuesta-intro { margin-bottom: 26px; font-size: 18px; line-height: 1.7; color: #fff; }
+.page-nosotros .about-pilares-cinta {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 4px 0 8px;
+}
+.page-nosotros .about-pilares-track { gap: 28px; padding-left: calc(50vw - 44%); animation-duration: 55s; }
+.page-nosotros .about-propuesta .about-pilares-track .about-pilar { flex-basis: 380px; width: 380px; min-height: 0; padding: 26px 28px; }
+.page-nosotros .about-propuesta .about-pilar h3 { font-size: 24px; margin-bottom: 10px; }
+.page-nosotros .about-propuesta .about-pilar p { font-size: 16px; line-height: 1.7; color: #333; }
+.page-nosotros .about-propuesta .about-pilar-numero { margin-bottom: 6px; }
+@keyframes pilares-cinta {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 14px)); }
+}
+@media only screen and (max-width: 980px) {
+  .page-nosotros .about-propuesta .about-pilares-track .about-pilar { flex-basis: 300px; width: 300px; }
+  .page-nosotros .about-pilares-track { padding-left: 5vw; }
+}
+
+/* Misión y visión: dos cuadros con bandera a cuadros */
+.page-nosotros .about-mv { padding: 64px 0; background: #f4f4f4; }
+.page-nosotros .about-mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.page-nosotros .about-mv-card {
+  padding: 40px 38px;
+  background: #fff;
+  border-top: 6px solid #e22522;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(26, 26, 26, 0.08);
+}
+.page-nosotros .about-mv-flag { display: block; width: 56px; height: 56px; margin-bottom: 18px; }
+.page-nosotros .about-mv-card h2 { margin: 0 0 12px; color: #1a1a1a; font-family: 'Khand', sans-serif; font-size: 34px; font-weight: 700; line-height: 1.1; text-transform: uppercase; }
+.page-nosotros .about-mv-card p { margin: 0; color: #444; font-size: 17px; line-height: 1.75; }
+@media only screen and (max-width: 980px) {
+  .page-nosotros .about-mv-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Rueda: el aro, los radios y las tuercas giran; los valores se mantienen fijos */
+.page-nosotros .rueda-girando {
+  position: absolute;
+  inset: 0;
+  animation: rueda-girar 18s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rueda-girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-nosotros .rueda-girando { animation: none; }
+}
+
+/* Valores: texto a la izquierda y rueda a la derecha */
+.page-nosotros .et_pb_section_3 .et_pb_row:not(.et_pb_row_inner) { display: flex; align-items: center; gap: 48px; }
+.page-nosotros .et_pb_section_3 .et_pb_column_12 { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding: 60px 40px; width: 100%; box-sizing: border-box; }
+.page-nosotros .et_pb_section_3 .et_pb_column_12 > .et_pb_row_inner { margin: 0; }
+.page-nosotros .et_pb_section_3 .valores-intro { max-width: none; }
+.page-nosotros .et_pb_section_3 .valores-intro p { text-align: left; font-size: 17px; line-height: 1.8; }
+.page-nosotros .et_pb_section_3 .valores-rueda { margin: 0 auto; max-width: 480px; }
+@media only screen and (max-width: 980px) {
+  .page-nosotros .et_pb_section_3 .et_pb_column_12 { grid-template-columns: 1fr; }
+}
+.page-nosotros .et_pb_section_3 .et_pb_column_12 { width: 88%; max-width: 1180px; margin: 0 auto; float: none; }
+.page-nosotros .et_pb_section_3 .valores-rueda { max-width: 520px; width: 100%; }
+
+/* Valores: quitar espacio superior e inferior */
+.page-nosotros .et_pb_section_3 .et_pb_column_12 { padding: 0 40px; }
+.page-nosotros .et_pb_section_3 .valores-rueda { margin-top: 0; margin-bottom: 0; }
+.page-nosotros .et_pb_section_3.et_pb_section { padding: 0 !important; }
+
+/* Misión y visión: aparecen al entrar en pantalla y la bandera ondea al pasar el cursor */
+@supports (animation-timeline: view()) {
+  .page-nosotros .about-mv-card {
+    animation: mv-subir linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+}
+@keyframes mv-subir {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-nosotros .about-mv-card:nth-child(2) { transition-delay: 120ms; }
+.page-nosotros .about-mv-flag { transform-origin: 50% 90%; transition: transform 300ms ease; }
+.page-nosotros .about-mv-card:hover .about-mv-flag { animation: mv-ondear 900ms ease-in-out infinite alternate; }
+@keyframes mv-ondear {
+  from { transform: rotate(-6deg) scale(1.04); }
+  to { transform: rotate(6deg) scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-nosotros .about-mv-card,
+  .page-nosotros .about-mv-card:hover .about-mv-flag { animation: none; }
+}
+
+/* Historia: menos espacio superior e inferior */
+.page-nosotros .about-historia { padding: 36px 0 28px; }
+.page-nosotros .about-historia .about-info-divider { margin: 14px 0 24px; }
+
+/* Portada "Qué hacemos": texto justificado */
+.page-nosotros .et_pb_section_0 .et_pb_text_1 p { text-align: justify; text-justify: inter-word; }
+
+/* Misión y visión: texto justificado */
+.page-nosotros .about-mv-card p { text-align: justify; text-justify: inter-word; }
+
+/* Valores: texto justificado */
+.page-nosotros .et_pb_section_3 .valores-intro p { text-align: justify; text-justify: inter-word; }
+
+/* Portada: foto del equipo más grande */
+.page-nosotros .about-hero-photo img { max-width: 680px; margin-left: auto; }

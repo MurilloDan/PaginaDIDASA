@@ -1,16 +1,46 @@
 /* ==========================================================================
-   Página "Promociones" — carrusel MetaSlider (extraído de tecdidasa.com/promociones/)
+   Página "Promociones" — carrusel MetaSlider con el estilo del sitio
+   (rojo de marca y azul marino). Mantiene las clases del markup de Promos.jsx.
    ========================================================================== */
+
+.page-promociones {
+  min-height: 70vh;
+  padding: 56px 0 72px;
+  background: #f3f4f7;
+}
+
+.page-promociones .promos-header {
+  width: min(92%, 1000px);
+  margin: 0 auto 28px;
+  padding-left: 4px;
+  border-left: 6px solid #e22522;
+}
+
+.page-promociones .promos-title {
+  margin: 0;
+  padding: 0 0 0 14px;
+  color: #0b1f2e;
+  font-family: 'Khand', Helvetica, Arial, sans-serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
 
 .page-promociones .metaslider {
   position: relative;
-  width: 100%;
+  width: min(92%, 1000px);
   margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(11, 31, 46, 0.12);
 }
 
 .page-promociones .metaslider-viewport {
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .page-promociones .metaslider-slides {
@@ -25,13 +55,18 @@
 .page-promociones .metaslider-slides li {
   flex: 0 0 auto;
   margin-right: 5px; /* itemMargin: 5 */
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .page-promociones .metaslider-slides img {
   display: block;
   width: 100%;
   height: auto;
+  transition: transform 400ms ease;
 }
+
+.page-promociones .metaslider-slides li:hover img { transform: scale(1.03); }
 
 /* ------------------------------------------------------------------ flechas */
 
@@ -41,27 +76,28 @@
   z-index: 10;
   display: grid;
   place-items: center;
-  width: 25px;
-  height: 25px;
-  margin-top: -12px;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
   color: #fff;
-  background: rgba(0, 0, 0, 0.7);
+  background: #e22522;
   border-radius: 50%;
-  transition: background-color 200ms ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: background-color 200ms ease, transform 200ms ease;
 }
 
-.page-promociones .flex-direction-nav a:hover { background: rgba(0, 0, 0, 0.9); }
-.page-promociones .flex-direction-nav a svg { width: 13px; height: 13px; fill: #fff; }
-.page-promociones .flex-direction-nav .flex-prev { left: 10px; }
-.page-promociones .flex-direction-nav .flex-next { right: 10px; }
+.page-promociones .flex-direction-nav a:hover { background: #0b1f2e; transform: scale(1.06); }
+.page-promociones .flex-direction-nav a svg { width: 22px; height: 22px; fill: #fff; }
+.page-promociones .flex-direction-nav .flex-prev { left: 12px; }
+.page-promociones .flex-direction-nav .flex-next { right: 12px; }
 
 /* ------------------------------------------------------------------- puntos */
 
 .page-promociones .flex-control-nav {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin: 16px 0 13px;
+  gap: 10px;
+  margin: 0 0 14px;
   padding: 0;
   list-style: none;
 }
@@ -73,13 +109,24 @@
   display: block;
   overflow: hidden;
   text-indent: -9999px;
-  width: 11px;
-  height: 11px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #c5ccd7;
+  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 200ms ease;
+  transition: background-color 200ms ease, width 200ms ease;
 }
 
-.page-promociones .flex-control-paging a:hover { background: rgba(0, 0, 0, 0.7); }
-.page-promociones .flex-control-paging a.flex-active { background: rgba(0, 0, 0, 0.9); cursor: default; }
+.page-promociones .flex-control-paging a:hover { background: #8a93a0; }
+
+.page-promociones .flex-control-paging a.flex-active {
+  width: 30px;
+  background: #e22522;
+  cursor: default;
+}
+
+@media only screen and (max-width: 767px) {
+  .page-promociones { padding: 40px 0 56px; }
+  .page-promociones .flex-direction-nav a { width: 36px; height: 36px; margin-top: -18px; }
+  .page-promociones .flex-direction-nav a svg { width: 18px; height: 18px; }
+}

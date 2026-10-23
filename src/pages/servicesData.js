@@ -7,6 +7,7 @@ export const services = {
   'cambio-de-lubricantes-fluidos-y-filtros': {
     title: 'Cambio de Lubricantes',
     menuTitle: 'Cambio de lubricantes, fluidos y filtros',
+    image: '/assets/servicio-lubricantes.jpg',
     split: 'half',
     items: [
       'Cambio de aceite de motor mineral o sintético según modelo y especificación del fabricante.',
@@ -19,6 +20,8 @@ export const services = {
   'diagnosticos-mecanicos': {
     title: 'Diagnósticos Mecánicos',
     menuTitle: 'Diagnósticos Mecánicos',
+    image: '/assets/servicio-diagnosticos.jpg',
+    imagePosition: '50% 20%',
     items: [
       'Inspección de 25 puntos de revisión.',
       'Verificación del sistema de encendido y batería con reporte.',
@@ -30,6 +33,7 @@ export const services = {
   'frenos-direccion-y-suspension': {
     title: 'Frenos, Dirección y Suspensión',
     menuTitle: 'Frenos, Dirección y Suspensión',
+    image: '/assets/servicio-frenos.jpg',
     items: [
       'Inspección Completa de los componentes del Siste de Freno, Dirección y Suspensión y dictamen sobre vida útil.',
       'Rectificado de Discos y Tambores con Alta Presición.',
@@ -42,6 +46,8 @@ export const services = {
   'alineamiento-y-balanceo': {
     title: 'Alineamiento y Balanceo',
     menuTitle: 'Alineamiento y Balanceo',
+    image: '/assets/servicio-alineamiento.jpg',
+    imagePosition: '50% 30%',
     items: [
       'Alineamiento',
       'Balanceo',
@@ -53,16 +59,21 @@ export const services = {
   'flush-y-aditivos': {
     title: 'FLUSH Y ADITIVOS',
     menuTitle: 'Flush y Aditivos',
+    image: '/assets/servicio-flush.jpg',
+    imagePosition: '40% 30%',
     items: ['Flush para limpieza de motor Diesel', 'Flush para limpieza de motor Gasolina'],
   },
   'limpieza-de-inyectores': {
     title: 'LIMPIEZA DE INYECTORES CON HERRAMIENTA',
     menuTitle: 'Limpieza de Inyectores',
+    image: '/assets/servicio-inyectores.jpg',
     items: ['Limpieza de Inyectores Diesel', 'Limpieza de Inyectores Gasolina'],
   },
   'enderezado-y-pintura': {
     title: 'ENDEREZADO Y PINTURA',
     menuTitle: 'Enderezado y Pintura',
+    image: '/assets/servicio-enderezado.jpg',
+    imagePosition: '50% 60%',
     items: [
       'Pintura general o específica',
       'Pulido general',
