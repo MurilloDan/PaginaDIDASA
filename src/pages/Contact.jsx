@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Contact.css'
+import BookedCalendar from '../components/BookedCalendar.jsx'
 
 const ARROW = 'E'
 
@@ -52,7 +53,7 @@ function Contact() {
 
             <div className="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
               <div className="et_pb_text_inner">
-                <h1>Contactar</h1>
+                <h1>Contáctanos</h1>
               </div>
             </div>
 
@@ -239,25 +240,22 @@ function Contact() {
           ))}
         </div>
 
-        {routeVideos.map((videoId, index) => (
-          <div className={`et_pb_row et_pb_row_${index + 2}`} key={videoId}>
-            <div
-              className={`et_pb_column et_pb_column_4_4 et_pb_column_${index + 6} et-last-child`}
-            >
-              <div className={`et_pb_module et_pb_video et_pb_video_${index}`}>
-                <div className="et_pb_video_box">
-                  <iframe
-                    title={`Como llegar a Tecnicentro DIDASA ruta ${index + 1}`}
-                    src={`https://www.youtube.com/embed/${videoId}?feature=oembed`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  />
-                </div>
+        <section className="contact-videos" aria-labelledby="contact-videos-title">
+          <h2 className="contact-videos-title" id="contact-videos-title">Cómo llegar</h2>
+          <div className="contact-videos-grid">
+            {routeVideos.map((videoId, index) => (
+              <div className="contact-video" key={videoId}>
+                <iframe
+                  title={`Como llegar a Tecnicentro DIDASA ruta ${index + 1}`}
+                  src={`https://www.youtube.com/embed/${videoId}?feature=oembed`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </section>
 
         <div className="et_pb_row et_pb_row_5">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_9 et-last-child">
@@ -272,6 +270,51 @@ function Contact() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="page-home">
+        {/* =============================================== Haz tu cita */}
+        <div className="et_pb_section et_pb_section_5 et_section_regular">
+          <div className="et_pb_row et_pb_row_6">
+            <div className="et_pb_column et_pb_column_1_2 et_pb_column_15">
+              <div className="et_pb_module et_pb_divider et_pb_divider_4">
+                <div className="et_pb_divider_internal" />
+              </div>
+              <div className="et_pb_module et_pb_image et_pb_image_3 et_pb_section_parallax">
+                <span className="et_parallax_bg_wrap">
+                  <span
+                    className="et_parallax_bg"
+                    style={{ backgroundImage: 'url(/assets/mechanic-70.jpg)' }}
+                  />
+                </span>
+                <span className="et_pb_image_wrap">
+                  <img src="/assets/mechanic-67.png" alt="" width="1000" height="1453" loading="lazy" />
+                </span>
+              </div>
+            </div>
+
+            <div className="et_pb_column et_pb_column_1_2 et_pb_column_16 et-last-child">
+              <div className="et_pb_module et_pb_text et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light">
+                <div className="et_pb_text_inner">
+                  <h2>
+                    <strong>Haz tu cita</strong>
+                  </h2>
+                  <p>
+                    <strong>
+                      Programa la fecha y hora para recibir una atención personalizada y en
+                      tiempo.
+                    </strong>
+                  </p>
+                </div>
+              </div>
+
+              <div className="et_pb_module et_pb_code et_pb_code_0" id="calendario">
+                <div className="et_pb_code_inner">
+                  <BookedCalendar />
+                </div>
               </div>
             </div>
           </div>

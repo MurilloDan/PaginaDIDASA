@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './booked.css'
 
+const WHATSAPP_NUMBER = '50497049138'
+const WEEKDAY_NAMES = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado']
+
 const MONTHS = [
   'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
   'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
@@ -23,6 +26,7 @@ function startOfDay(date) {
 function BookedCalendar() {
   const today = startOfDay(new Date())
   const [month, setMonth] = useState(new Date(today.getFullYear(), today.getMonth(), 1))
+  const [selected, setSelected] = useState(null)
 
   // La cuadrícula arranca en lunes, igual que el calendario original.
   const firstWeekday = (month.getDay() + 6) % 7
@@ -110,15 +114,21 @@ function BookedCalendar() {
                   }
                   if (unavailable) classes.push('prev-date')
                   if (date.getTime() === today.getTime()) classes.push('today')
+                  const isSelected = selected && date.getTime() === selected.getTime()
+                  if (isSelected) classes.push('selected')
 
                   return (
                     <div className={classes.join(' ')} key={date.toISOString()}>
-                      <span
+                      <button
+                        type="button"
                         className="date"
+                        disabled={unavailable}
+                        aria-pressed={isSelected}
                         title={unavailable ? undefined : `${slots} Disponibles`}
+                        onClick={() => setSelected(date)}
                       >
                         <span className="number">{date.getDate()}</span>
-                      </span>
+                      </button>
                     </div>
                   )
                 })}
@@ -126,6 +136,23 @@ function BookedCalendar() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="bc-cita">
+        <p className="bc-cita-texto">
+          {selected
+            ? `Fecha elegida: ${WEEKDAY_NAMES[selected.getDay()]} ${selected.getDate()} de ${MONTHS[selected.getMonth()]} de ${selected.getFullYear()}`
+            : 'Elige un día disponible en el calendario.'}
+        </p>
+        <a
+          className={`bc-cita-boton${selected ? '' : ' is-disabled'}`}
+          aria-disabled={!selected}
+          href={selected ? `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(`Hola, quisiera agendar una cita para el ${WEEKDAY_NAMES[selected.getDay()]} ${selected.getDate()} de ${MONTHS[selected.getMonth()]} de ${selected.getFullYear()}.`)}` : undefined}
+          target="_blank"
+          rel="noopener"
+        >
+          Hacer cita
+        </a>
       </div>
     </div>
   )

@@ -55,7 +55,7 @@ function ServicePage({ slug }) {
                 <span className="et_parallax_bg" style={{ backgroundImage: `url(${fondo})` }} />
               </span>
               <span className="et_pb_image_wrap">
-                <img src={foto} alt={service.title} width="1000" height="660" loading="lazy" />
+                <img src={foto} alt={service.title} width="1000" height="660" loading="lazy" style={service.imagePosition ? { objectPosition: service.imagePosition } : undefined} />
               </span>
             </div>
           </div>

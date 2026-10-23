@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './About.css'
-import BottomStrip from '../components/BottomStrip.jsx'
 import PhotoCarousel from '../components/PhotoCarousel.jsx'
 
 const galeria = [
@@ -21,6 +20,29 @@ const galeria = [
   '/assets/galeria/WhatsApp-Image-2024-04-17-at-1.43.14-PM.jpeg',
 ]
 
+const pilares = [
+  {
+    titulo: 'Servicio Integral y Especializado',
+    texto:
+      'Combinamos tecnicentro automotriz y distribución de repuestos en un solo lugar, ofreciendo a nuestros clientes todo lo necesario para el mantenimiento y reparación de sus vehículos, con garantía de calidad en productos y servicios.',
+  },
+  {
+    titulo: 'Tecnología y Profesionalismo',
+    texto:
+      'Contamos con equipos de diagnóstico de última generación y un equipo técnico certificado en constante capacitación, asegurando diagnósticos precisos, reparaciones efectivas y tiempos de respuesta competitivos.',
+  },
+  {
+    titulo: 'Transparencia y Confianza',
+    texto:
+      'En DIDASA, la transparencia es fundamental. Explicamos claramente cada diagnóstico, detallamos los trabajos a realizar y proporcionamos cotizaciones honestas sin costos ocultos. Nuestros clientes toman decisiones informadas y confían en que recibirán exactamente lo que necesitan, sin sorpresas desagradables.',
+  },
+  {
+    titulo: 'Disponibilidad y Rapidez',
+    texto:
+      'Como importadores directos de autopartes, garantizamos disponibilidad inmediata de repuestos, reduciendo tiempos de espera y asegurando que los vehículos de nuestros clientes vuelvan a la carretera lo más pronto posible. Nuestra eficiencia operativa se traduce en ahorro',
+  },
+]
+
 const valores = ['sERVICIO AL CLIENTE', 'HONESTIDAD', 'INTEGRIDAD', 'COMPETENCIA TÉCNICA', 'PROFESIONALISMO']
 
 const PASO = 360 / valores.length
@@ -34,79 +56,49 @@ function posicionEnRueda(index, radio = 38, desfase = 0) {
   }
 }
 
-const fotosTaller = [
-  ['/assets/mechanic-68.jpg', 1000, 786],
-  ['/assets/mechanic-20.jpg', 600, 901],
-  ['/assets/mechanic-89.jpg', 1000, 660],
-]
-
-/**
- * Muestra la portada del video y sólo carga el iframe de YouTube al hacer clic:
- * así la sección nunca se ve vacía y la página no arrastra el reproductor completo.
- */
-function Video({ id, poster, title }) {
-  const [reproduciendo, setReproduciendo] = useState(false)
-
+/** Banderas a cuadros cruzadas, como en el logo de DIDASA. */
+function FlagIcon() {
   return (
-    <div className="et_pb_module et_pb_video">
-      <div className="et_pb_video_box">
-        {reproduciendo ? (
-          <iframe
-            title={title}
-            width="1080"
-            height="608"
-            src={`https://www.youtube.com/embed/${id}?feature=oembed&autoplay=1`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        ) : (
-          <button
-            type="button"
-            className="video-portada"
-            onClick={() => setReproduciendo(true)}
-            aria-label={`Reproducir: ${title}`}
-          >
-            <img src={poster} alt="" width="640" height="360" loading="lazy" />
-            <span className="video-play" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5.5v13l11-6.5z" />
-              </svg>
-            </span>
-            <span className="video-titulo">{title}</span>
-          </button>
-        )}
-      </div>
-    </div>
+    <svg className="about-mv-flag" viewBox="0 0 48 48" aria-hidden="true">
+      <defs>
+        <pattern id="cuadros" width="6" height="6" patternUnits="userSpaceOnUse">
+          <rect width="6" height="6" fill="#fff" />
+          <rect width="3" height="3" fill="#1a1a1a" />
+          <rect x="3" y="3" width="3" height="3" fill="#1a1a1a" />
+        </pattern>
+      </defs>
+      <rect x="6" y="6" width="18" height="14" fill="url(#cuadros)" transform="rotate(-20 15 13)" />
+      <rect x="24" y="6" width="18" height="14" fill="url(#cuadros)" transform="rotate(20 33 13)" />
+      <path d="M10 44 L14 6" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M38 44 L34 6" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M8 24 Q24 18 40 24" stroke="#e22522" strokeWidth="3" fill="none" strokeLinecap="round" />
+    </svg>
   )
 }
 
 function About() {
+  const [pausada, setPausada] = useState(false)
+
   return (
     <div className="page-nosotros">
+      {/* =============================================== galería */}
+      <div className="about-gallery">
+        <PhotoCarousel images={galeria} />
+      </div>
+
       {/* =============================================== portada */}
       <div className="et_pb_section et_pb_section_0 et_section_specialty">
         <div className="et_pb_row">
-          <div className="et_pb_column et_pb_column_1_2 et_pb_column_0">
-            <div className="et_pb_module et_pb_image et_pb_image_0 et_pb_section_parallax">
-              <span className="et_parallax_bg_wrap">
-                <span
-                  className="et_parallax_bg"
-                  style={{ backgroundImage: 'url(/assets/mechanic-93.jpg)' }}
-                />
-              </span>
-              <span className="et_pb_image_wrap">
-                <img src="/assets/mechanic-73.png" alt="" width="1920" height="1100" />
-              </span>
-            </div>
+          <div className="et_pb_column et_pb_column_1_2 about-hero-photo">
+            <img src="/assets/equipo-tecnicentro-grande.jpg" alt="Equipo de Tecnicentro DIDASA" width="1600" height="1226" />
           </div>
 
-          <div className="et_pb_column et_pb_column_1_2 et_pb_column_1 et-last-child">
+          <div className="et_pb_column et_pb_column_1_2 et_pb_column_1 about-hero-text et-last-child">
             <div className="et_pb_row_inner et_pb_row_inner_0">
               <div className="et_pb_column et_pb_column_4_4 et_pb_column_inner et-last-child">
                 <div className="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_dark">
                   <div className="et_pb_text_inner">
-                    <h1>tecnicentro didasa</h1>
+                    <h1>Qué hacemos</h1>
                   </div>
                 </div>
 
@@ -117,12 +109,13 @@ function About() {
                 <div className="et_pb_module et_pb_text et_pb_text_1 et_pb_text_align_left et_pb_bg_layout_dark">
                   <div className="et_pb_text_inner">
                     <p>
-                      Tecnicentro DIDASA es un centro de servicio automotriz integral, especializado
-                      en mantenimiento, reparación e instalación de auto partes.
+                      DIDASA ofrece soluciones integrales para el mantenimiento y cuidado de vehículos, combinando dos líneas de negocio complementarias que nos permiten brindar un servicio completo y de excelencia.
                     </p>
                     <p>
-                      Nos distinguimos por nuestra tecnología avanzada, técnicos profesionales y
-                      atención personalizada
+                      Tecnicentro Automotriz: nuestro centro de servicio automotriz ofrece mantenimiento preventivo y correctivo especializado para todo tipo de vehículos. Contamos con instalaciones modernas, equipos de diagnóstico de última generación y técnicos certificados que garantizan la máxima calidad en cada intervención.
+                    </p>
+                    <p>
+                      Brindamos desde servicios básicos de mantenimiento hasta reparaciones complejas de motor, transmisión, frenos, suspensión y sistemas eléctricos, incluyendo diagnóstico computarizado. Cada vehículo recibe atención personalizada.
                     </p>
                   </div>
                 </div>
@@ -132,125 +125,85 @@ function About() {
         </div>
       </div>
 
-      {/* =============================================== misión */}
-      <div className="et_pb_section et_pb_section_1 et_section_regular">
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_1_3 et_pb_column_2">
-            <div className="et_pb_module et_pb_text seccion-titulo et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner">
-                <h2>Nuestra misión</h2>
-              </div>
-            </div>
-            <div className="et_pb_module et_pb_divider et_pb_divider_rojo">
-              <div className="et_pb_divider_internal" />
-            </div>
-            <div className="et_pb_module et_pb_text seccion-texto et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner">
-                <p>
-                  Garantizar la seguridad y el rendimiento de los vehículos de nuestros clientes,
-                  ofreciendo servicios de mantenimiento y repuestos de calidad, bajo altos estándares
-                  de ética y confiabilidad.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="et_pb_column et_pb_column_2_3 et_pb_column_3 et-last-child">
-            <div className="et_pb_module et_pb_image logo-strip">
-              <span className="et_pb_image_wrap">
-                <img src="/assets/mechanic-63.png" alt="" width="1068" height="166" />
-              </span>
-            </div>
-            <Video id="KKZWr16AamM" poster="/assets/video-mision.jpg" title="Atención personalizada" />
-          </div>
-        </div>
-      </div>
-
-      {/* =============================================== visión, fotos y galería */}
-      <div className="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
-        <div className="et_pb_row et_pb_row_1">
-          {fotosTaller.map(([src, width, height], index) => (
-            <div
-              className={`et_pb_column et_pb_column_1_3${index === 2 ? ' et-last-child' : ''}`}
-              key={src}
-            >
-              <div className="et_pb_module et_pb_image foto-taller">
-                <span className="et_pb_image_wrap">
-                  <img src={src} alt="" width={width} height={height} loading="lazy" />
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="et_pb_row et_pb_row_2">
-          <div className="et_pb_column et_pb_column_1_3 et_pb_column_7">
-            <div className="et_pb_module et_pb_text seccion-titulo et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner">
-                <h2>Nuestra vISIÓN</h2>
-              </div>
-            </div>
-            <div className="et_pb_module et_pb_divider et_pb_divider_rojo">
-              <div className="et_pb_divider_internal" />
-            </div>
-            <div className="et_pb_module et_pb_text seccion-texto et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner">
-                <p>
-                  Ser el centro de servicio automotriz de referencia en el Distrito Central,
-                  destacando por la excelencia, innovación y compromiso con la satisfacción del
-                  cliente.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="et_pb_column et_pb_column_2_3 et_pb_column_8 et-last-child">
-            <div className="et_pb_module et_pb_image logo-strip">
-              <span className="et_pb_image_wrap">
-                <img src="/assets/mechanic-63.png" alt="" width="1068" height="166" loading="lazy" />
-              </span>
-            </div>
-            <Video id="3o0R9L6k6OY" poster="/assets/video-vision.jpg" title="Personal altamente calificado" />
-          </div>
-        </div>
-
-        <div className="et_pb_row et_pb_row_3">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_9 et-last-child">
-            <PhotoCarousel images={galeria} />
-          </div>
-        </div>
-
-        <div className="et_pb_row et_pb_row_4">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_10 et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_6 et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner">
-                <h2>TECNICENTRO DIDASA</h2>
-              </div>
-            </div>
-            <div className="et_pb_module et_pb_divider et_pb_divider_rojo">
-              <div className="et_pb_divider_internal" />
+      {/* =============================================== historia */}
+      <section className="about-info about-historia">
+        <div className="about-info-inner">
+          <h2 className="about-info-title">Nuestra historia</h2>
+          <div className="about-info-divider" />
+          <div className="about-historia-grid">
+            <p className="about-lead">
+              DIDASA nació con la visión de revolucionar el servicio automotriz en Honduras, ofreciendo
+              una alternativa confiable, profesional y tecnológicamente avanzada.
+            </p>
+            <div className="about-historia-body">
+              <p>
+                Desde el inicio, invertimos en tecnología de diagnóstico, capacitación continua y
+                relaciones con proveedores internacionales, convirtiéndonos en importadores directos y
+                garantizando la calidad de cada autoparte.
+              </p>
+              <p>
+                Con el tiempo, hemos crecido, ampliando instalaciones, diversificando servicios y
+                consolidando nuestra reputación como un tecnicentro de referencia en Tegucigalpa.
+              </p>
+              <p>
+                Nuestro crecimiento se refleja en la confianza de nuestros clientes. Cada vehículo
+                atendido y cada repuesto entregado refuerzan nuestro compromiso con la excelencia y nos
+                motivan a mejorar día a día.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* =============================================== misión y visión */}
+      <section className="about-info about-mv">
+        <div className="about-info-inner about-mv-grid">
+          <article className="about-mv-card">
+            <FlagIcon />
+            <h2>Nuestra misión</h2>
+            <p>
+              Garantizar la seguridad y el rendimiento de los vehículos de nuestros clientes,
+              ofreciendo servicios de mantenimiento y repuestos de calidad, bajo altos estándares de
+              ética y confiabilidad.
+            </p>
+          </article>
+          <article className="about-mv-card">
+            <FlagIcon />
+            <h2>Nuestra visión</h2>
+            <p>
+              Ser el centro de servicio automotriz de referencia en el Distrito Central, destacando
+              por la excelencia, innovación y compromiso con la satisfacción del cliente.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* =============================================== propuesta de valor */}
+      <section className="about-info about-propuesta">
+        <div className="about-info-inner">
+          <h2 className="about-info-title">Propuesta de valor</h2>
+          <div className="about-info-divider" />
+          <p className="about-lead about-propuesta-intro">
+            La propuesta de valor de DIDASA se sustenta en tres pilares que nos distinguen en el
+            cuidado automotriz en Honduras.
+          </p>
+          <div className="about-pilares-cinta" onClick={() => setPausada((v) => !v)} role="button" tabIndex={0} aria-pressed={pausada} aria-label={pausada ? 'Reanudar cinta' : 'Detener cinta'} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setPausada((v) => !v) } }}>
+            <div className={`about-pilares-track${pausada ? ' is-paused' : ''}`}>
+              {[...pilares, ...pilares].map((pilar, index) => (
+                <article className="about-pilar" key={index} aria-hidden={index >= pilares.length}>
+                  <span className="about-pilar-numero">{String((index % pilares.length) + 1).padStart(2, '0')}</span>
+                  <h3>{pilar.titulo}</h3>
+                  <p>{pilar.texto}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* =============================================== valores */}
       <div className="et_pb_section et_pb_section_3 et_section_specialty">
         <div className="et_pb_row">
-          <div className="et_pb_column et_pb_column_1_2 et_pb_column_11">
-            <div className="et_pb_module et_pb_image et_pb_image_6 et_pb_section_parallax">
-              <span className="et_parallax_bg_wrap">
-                <span
-                  className="et_parallax_bg"
-                  style={{ backgroundImage: 'url(/assets/mechanic-58.jpg)' }}
-                />
-              </span>
-              <span className="et_pb_image_wrap">
-                <img src="/assets/mechanic-84.png" alt="" width="1000" height="1366" loading="lazy" />
-              </span>
-            </div>
-          </div>
-
           <div className="et_pb_column et_pb_column_1_2 et_pb_column_12 et-last-child">
             <div className="et_pb_row_inner">
               <div className="et_pb_column et_pb_column_4_4 et_pb_column_inner et-last-child">
@@ -267,25 +220,26 @@ function About() {
             </div>
 
             <div className="valores-rueda">
-              <div className="rueda-aro" aria-hidden="true" />
-              {/* Los radios caen entre valor y valor, y las tuercas van sobre ellos. */}
-              {valores.map((valor, index) => (
-                <span
-                  className="rueda-radio"
-                  key={`radio-${valor}`}
-                  aria-hidden="true"
-                  style={{ transform: `rotate(${index * PASO - 90 + PASO / 2}deg)` }}
-                />
-              ))}
-              {valores.map((valor, index) => (
-                <span
-                  className="rueda-tuerca"
-                  key={`tuerca-${valor}`}
-                  aria-hidden="true"
-                  style={posicionEnRueda(index, 20, PASO / 2)}
-                />
-              ))}
-
+              <div className="rueda-girando" aria-hidden="true">
+                <div className="rueda-aro" aria-hidden="true" />
+                {/* Los radios caen entre valor y valor, y las tuercas van sobre ellos. */}
+                {valores.map((valor, index) => (
+                  <span
+                    className="rueda-radio"
+                    key={`radio-${valor}`}
+                    aria-hidden="true"
+                    style={{ transform: `rotate(${index * PASO - 90 + PASO / 2}deg)` }}
+                  />
+                ))}
+                {valores.map((valor, index) => (
+                  <span
+                    className="rueda-tuerca"
+                    key={`tuerca-${valor}`}
+                    aria-hidden="true"
+                    style={posicionEnRueda(index, 20, PASO / 2)}
+                  />
+                ))}
+              </div>
               <div className="rueda-centro">
                 <h2>
                   <strong>VALORES</strong>
@@ -304,7 +258,6 @@ function About() {
         </div>
       </div>
 
-      <BottomStrip />
     </div>
   )
 }

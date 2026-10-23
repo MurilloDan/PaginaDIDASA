@@ -6,7 +6,7 @@
 
 .booked-calendar { background: #fff; font-size: 14px; }
 
-.booked-calendar .bc-head { background: #2371b1 !important; }
+.booked-calendar .bc-head { background: #0b1f2e !important; }
 
 .booked-calendar .bc-row.top {
   display: flex;
@@ -47,7 +47,7 @@
 .booked-calendar .bc-row.days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background: #014163 !important;
+  background: #0b1f2e !important;
 }
 
 .booked-calendar .bc-row.days .bc-col {
@@ -57,7 +57,7 @@
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  border-color: #014163 !important;
+  border-color: #0b1f2e !important;
 }
 
 .booked-calendar .bc-body { background: #fff; }
@@ -93,7 +93,7 @@
   transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
 }
 
-.booked-calendar .bc-body .bc-col .date:hover { background: #2371b1; color: #fff; }
+.booked-calendar .bc-body .bc-col .date:hover { background: #0b1f2e; color: #fff; }
 
 .booked-calendar .bc-body .bc-col.prev-date,
 .booked-calendar .bc-body .bc-col.prev-month,
@@ -108,8 +108,8 @@
 .booked-calendar .bc-body .bc-col.prev-date .date:hover { background: none; color: #ccc; }
 
 .booked-calendar .bc-body .bc-col.today .date {
-  border-color: #2371b1;
-  color: #2371b1;
+  border-color: #0b1f2e;
+  color: #0b1f2e;
   font-weight: 600;
 }
 
@@ -121,3 +121,25 @@
   .booked-calendar .bc-body .bc-col .date { width: 24px; height: 24px; font-size: 12px; }
   .booked-calendar .bc-row.top .monthName { font-size: 16px; }
 }
+
+/* Día elegido y botón para pedir la cita por WhatsApp */
+.booked-calendar .bc-col .date { all: unset; box-sizing: border-box; display: block; width: 100%; height: 100%; cursor: pointer; }
+.booked-calendar .bc-col .date:disabled { cursor: default; }
+.booked-calendar .bc-col.selected { background: #0b1f2e; }
+.booked-calendar .bc-col.selected .number { color: #fff; font-weight: 700; }
+.booked-calendar .bc-col .date:focus-visible { outline: 2px solid #e22522; outline-offset: -2px; }
+.bc-cita { margin-top: 22px; text-align: center; }
+.bc-cita-texto { margin: 0 0 14px; color: #444; font-size: 16px; font-weight: 600; }
+.bc-cita-boton {
+  display: inline-block;
+  padding: 16px 44px;
+  color: #fff !important;
+  background: #22c15e;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+.bc-cita-boton:hover { background: #1aa34d; transform: translateY(-2px); }
+.bc-cita-boton.is-disabled { background: #c5ccd7; pointer-events: none; }

@@ -58,16 +58,7 @@ function Layout({ children, path }) {
                 </li>
               </ul>
               <div id="footer-info">
-                Copyright © tecdidasa.com{' '}
-                <a
-                  href="http://www.agenciasims.com/"
-                  title="Visit AgenciaSIMS.com Hosting and Pro Web Designs"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="footerc"
-                >
-                  Designed by SIMS S. de R. L.
-                </a>
+                © 2026  tecdidasa.com
               </div>
             </div>
           </div>

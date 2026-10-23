@@ -96,7 +96,12 @@ function SiteHeader({ path }) {
                 ))}
               </ul>
               <div className="et_pb_button_module_wrapper et_pb_button_0_tb_header_wrapper et_pb_button_alignment_right et_pb_module">
-                <a className="et_pb_button et_pb_button_0_tb_header" href="#calendario">
+                <a
+                  className="et_pb_button et_pb_button_0_tb_header"
+                  href="https://api.whatsapp.com/send?phone=50497049138&text=Hola%2C%20quisiera%20agendar%20una%20cita."
+                  target="_blank"
+                  rel="noopener"
+                >
                   Haz una cita!
                 </a>
               </div>
